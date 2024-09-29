@@ -487,5 +487,12 @@ public class SerializationExample {
     }
 }
 
+16) Why String is immutable ? 
+  String is often used as database passwords and usernames etc. So it needs to be immutable to prevent modification .
+  It saves lot of space in string pool of heap by avoiding duplicate creation
+  It can be safely used in multithreaded environments.
 
+17) What are new features in java 17 ?
+
+Sealed classes
 

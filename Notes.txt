@@ -493,9 +493,9 @@ public class SerializationExample {
   It can be safely used in multithreaded environments.
 
 17) What are new features in java 17 ?
-
 Sealed classes
+
 18) What are JAR and WAR files ? what are difference between JAR and WAR ?
-JAR - It is a compressed archive of .class files 
-WAR - Compressed archive of a web application
+JAR - It is a compressed archive of .class files . They are used to distribute java libraries, java application
+WAR - Compressed archive of a web application, They are used to distribure web application
 

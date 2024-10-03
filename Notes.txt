@@ -499,3 +499,12 @@ Sealed classes
 JAR - It is a compressed archive of .class files . They are used to distribute java libraries, java application
 WAR - Compressed archive of a web application, They are used to distribure web application
 
+19) How did you implement security in your application ?
+20) What are features of Java 17 ? sealed class 
+21) Can we override static methods in Java ? No. 
+22) Why String is immutable ? 
+  String is often used as database passwords and usernames etc. So it needs to be immutable to prevent modification .
+  It saves lot of space in string pool of heap by avoiding duplicate creation
+  It can be safely used in multithreaded environments.
+23) What is the use of default methods in interfaces ? what is the signature of default methods.
+24) Does abstract class have constructor ? 

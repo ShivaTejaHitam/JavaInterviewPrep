@@ -508,3 +508,11 @@ WAR - Compressed archive of a web application, They are used to distribure web a
   It can be safely used in multithreaded environments.
 23) What is the use of default methods in interfaces ? what is the signature of default methods.
 24) Does abstract class have constructor ? 
+25) What does main method does in spring boot ?
+The SpringApplication class in Spring Boot is a key class used to bootstrap and launch a Spring application from a main method. It provides a convenient way to configure and run a Spring application with sensible defaults. This class plays a crucial role in the startup process by setting up the Spring context, performing configuration, and starting the embedded server (like Tomcat, Jetty, or Undertow) if it's a web application.
+
+Key Responsibilities of SpringApplication:
+ 	-Bootstrap the application: It initializes the Spring application context, loading beans and configuring the environment.
+	-Configure the environment: Automatically loads properties and profiles based on various sources, such as application.properties, application.yml, 	or system variables.
+	-Set up default configurations: It applies sensible defaults for things like logging, bean scanning, and embedded server configurations.
+	-Launch the application: Starts the embedded web server (if a web application), and the application begins accepting requests.

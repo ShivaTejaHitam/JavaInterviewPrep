@@ -517,3 +517,6 @@ Key Responsibilities of SpringApplication:
 	-Set up default configurations: It applies sensible defaults for things like logging, bean scanning, and embedded server configurations.
 	-Launch the application: Starts the embedded web server (if a web application), and the application begins accepting requests.
 not enough. no gl
+26) What happens if @Bean is defined in a class without @Configuration annotation ?
+	- Bean will not be managed by Ioc Container. The method will be just a normal method.
+	- If it is defined in any class annotated with @Component, @Service etc., bean is managed by Ioc but it will not be Singleton.

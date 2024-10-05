@@ -526,3 +526,4 @@ not enough. no gl
 
 29) use @Import annotation to import another config class in to this class
 30) Use @Profiles for activating required profiles
+31) bean lifecycle

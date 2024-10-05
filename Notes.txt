@@ -516,3 +516,4 @@ Key Responsibilities of SpringApplication:
 	-Configure the environment: Automatically loads properties and profiles based on various sources, such as application.properties, application.yml, 	or system variables.
 	-Set up default configurations: It applies sensible defaults for things like logging, bean scanning, and embedded server configurations.
 	-Launch the application: Starts the embedded web server (if a web application), and the application begins accepting requests.
+not enough. no gl

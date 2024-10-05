@@ -520,3 +520,8 @@ not enough. no gl
 26) What happens if @Bean is defined in a class without @Configuration annotation ?
 	- Bean will not be managed by Ioc Container. The method will be just a normal method.
 	- If it is defined in any class annotated with @Component, @Service etc., bean is managed by Ioc but it will not be Singleton.
+27) What are @Qualifier and @Primary annotations ?
+
+28) If the Class implements multiple interfaces , use specific type during dependency injection instead of interface types.
+
+29) use @Import annotation to import another config class in to this class

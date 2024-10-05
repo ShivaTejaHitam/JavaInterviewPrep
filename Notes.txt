@@ -525,3 +525,4 @@ not enough. no gl
 28) If the Class implements multiple interfaces , use specific type during dependency injection instead of interface types.
 
 29) use @Import annotation to import another config class in to this class
+30) Use @Profiles for activating required profiles

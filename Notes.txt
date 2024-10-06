@@ -529,3 +529,6 @@ not enough. no gl
 29) use @Import annotation to import another config class in to this class
 30) Use @Profiles for activating required profiles
 31) bean lifecycle
+32) What is the difference between Stream.of and Arrays.stream in java ?
+	Stream.of() creates entire object as stream if array is passed
+	Arrays.stream() treats elements of array as individual elements of stream

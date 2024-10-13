@@ -532,3 +532,8 @@ not enough. no gl
 32) What is the difference between Stream.of and Arrays.stream in java ?
 	Stream.of() creates entire object as stream if array is passed
 	Arrays.stream() treats elements of array as individual elements of stream
+33) Explain modelAtrribute in Spring Mvc
+34) Explain handler mapping in spring mvc
+35) Explain interceptor in spring mvc 
+36) how do you handle exceptions in spring mvc 
+37) how do you handle exceptions in spring boot

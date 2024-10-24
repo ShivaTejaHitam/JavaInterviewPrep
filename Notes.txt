@@ -537,3 +537,4 @@ Key Responsibilities of SpringApplication:
 35) Explain interceptor in spring mvc 
 36) how do you handle exceptions in spring mvc 
 37) how do you handle exceptions in spring boot
+38) what are different ways to achieve synchronization in java

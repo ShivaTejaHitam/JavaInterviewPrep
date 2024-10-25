@@ -1,0 +1,112 @@
+Let's consider a scenario where we start with a table that does not satisfy any normal form (1NF, 2NF, or 3NF).
+We'll go through the process of normalizing this table step by step, applying each normal form to improve the database structure.
+
+Scenario: A University Course Enrollment System
+In this example, we have a single table that stores the following data:
+
+Student_ID	Student_Name	Courses	Instructor_Name	Instructor_Phone
+1	John	Math, Science	Dr. Smith	1234567890
+2	Alice	Math, History	Dr. Smith, Dr. Lee	1234567890, 9876543210
+3	Bob	History	Dr. Lee	9876543210
+
+Issues with the current table:
+Multiple values (courses and instructors) are stored in a single column, which violates 1NF.
+Redundancy: Instructor details are repeated for each student.
+Dependencies: Some attributes (Instructor_Phone) are dependent on non-primary key columns.
+We will apply each normal form step by step to normalize this table.
+
+Step 1: Apply First Normal Form (1NF)
+1NF Requirements:
+All values must be atomic (no repeating groups or arrays). Every cell should contain only a single value.
+Problem:
+In the original table, both Courses and Instructor_Phone have multiple values in a single cell. This violates 1NF.
+
+Solution:
+We split the multi-valued fields into separate rows, ensuring atomicity.
+
+Student_ID	Student_Name	Course	Instructor_Name	Instructor_Phone
+1	John	Math	Dr. Smith	1234567890
+1	John	Science	Dr. Smith	1234567890
+2	Alice	Math	Dr. Smith	1234567890
+2	Alice	History	Dr. Lee	9876543210
+3	Bob	History	Dr. Lee	9876543210
+
+Now, the table satisfies 1NF. However, there is still redundancy and partial dependency.
+
+Step 2: Apply Second Normal Form (2NF)
+2NF Requirements:
+The table must be in 1NF.
+There should be no partial dependencies. In other words, if there is a composite primary key, all non-key attributes must depend on the entire primary key, not just part of it.
+Problem:
+Here, Instructor_Name and Instructor_Phone depend only on Course, not on the entire composite key (Student_ID, Course). This is a partial dependency, violating 2NF.
+
+Solution:
+We break the table into two separate tables:
+
+Student_Course Table: Contains information about which student is enrolled in which course.
+Course_Instructor Table: Contains the instructor information for each course.
+
+Student_Course Table:
+Student_ID	Student_Name	Course
+1	John	Math
+1	John	Science
+2	Alice	Math
+2	Alice	History
+3	Bob	History
+
+Course_Instructor Table:
+Course	Instructor_Name	Instructor_Phone
+Math	Dr. Smith	1234567890
+Science	Dr. Smith	1234567890
+History	Dr. Lee	9876543210
+
+Now, the Student_Course table has no partial dependencies, and the Instructor_Name and Instructor_Phone have been moved to the Course_Instructor table.
+
+This satisfies 2NF. However, there is still transitive dependency.
+
+Step 3: Apply Third Normal Form (3NF)
+3NF Requirements:
+The table must be in 2NF.
+There should be no transitive dependencies, meaning that non-key columns should depend only on the primary key and not on other non-key columns.
+Problem:
+In the Course_Instructor table, Instructor_Phone depends on Instructor_Name, which is a transitive dependency. The primary key here is Course, but Instructor_Phone should depend directly on Instructor_Name, not Course.
+
+Solution:
+We create a separate table for the instructor information, breaking the transitive dependency.
+
+Course_Instructor Table (updated):
+Course	Instructor_Name
+Math	Dr. Smith
+Science	Dr. Smith
+History	Dr. Lee
+
+Instructor Table:
+Instructor_Name	Instructor_Phone
+Dr. Smith	1234567890
+Dr. Lee	9876543210
+Now, the Instructor_Phone is stored in a separate Instructor table and depends only on the Instructor_Name. This satisfies 3NF.
+
+Final Normalized Tables
+1. Student_Course Table:
+Student_ID	Student_Name	Course
+1	John	Math
+1	John	Science
+2	Alice	Math
+2	Alice	History
+3	Bob	History
+
+2. Course_Instructor Table:
+Course	Instructor_Name
+Math	Dr. Smith
+Science	Dr. Smith
+History	Dr. Lee
+
+3. Instructor Table:
+Instructor_Name	Instructor_Phone
+Dr. Smith	1234567890
+Dr. Lee	9876543210
+Conclusion:
+1NF: We removed multi-valued fields by creating separate rows for each course.
+2NF: We eliminated partial dependencies by creating a separate table for the instructor and course relationships.
+3NF: We eliminated transitive dependencies by creating a separate table for the instructor's phone number.
+This step-by-step normalization process reduces redundancy, improves data integrity, and ensures that the database follows best practices.

@@ -5,7 +5,47 @@ domain - java.
 During internship we were trained on many interesting things like naming conventions , design principles, design patterns, unit testing
 java 8 features , multithreading. 
 
-After that we worked on a training project Course Management system. 
-We started with just a
+After that we worked on a training project Course Management system . This project basically involved  crud operations on 
+We started with just console application written in plain java.
+
+After we eventually applied the concepts we learned like spring framework , spring mvc , spring boot, JPA. 
+
+During the internship I received pat on award for best performance during internship. It was really a good learning experience. 
+
+After internship I got an opportunity to work with my first client Google. Our team GO2-ITIA. Suit of internal projects which automates the manual processes.
+When I joined this account , there was a huge learning curve because google uses their own internal frameworks.
+I learned several technologies like grpc, apps framework, guice,  angular dart , fig etc
+I was able to adapt to these technologies pretty quickly. 
+
+After the learning phase I was assigned to a project called supporttimely. Which is basically an onboarding application for google. 
+appointment scheduling , booking slots. 
+This application was developed during covid19 period when there was some emergency. Due to this lot techdebt in the project like low test coverage, lack of null safety, duplicate code,
+dead code etc.
+
+In this project mainly worked on improving the test coverage. We have improved overall test coverage from 30% to above 90% for the codebase. 
+After that I worked on null safety which dart does not support by default. It has reduced the runtime bugs to great extent.
+Received delivery excellence award .
+
+After this project I got an opportunity to work on another client  called DHL. DHL is a logistics company. I have worked on an application called MyGTS. 
+This application is used for quotation generation for an estimation before planning a shipment. 
+
+We worked on many to many shipments. Technologies used spring boot, oracle db , deployment, discussion with BA etc
+
+After this again I got an opportunity to work with my first client Google. 
+
+Worked on Manage Email template feature which simplifies the email template updates.
+Worked on exxpiry based onboarding system. 
+Worked on reinserting failed msgs
+worked on automation deployment failures. 
+
+
+
+
+
+
+
+
+
+
 
 

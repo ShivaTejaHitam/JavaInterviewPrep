@@ -1,0 +1,11 @@
+Name, Graduated in cse from.. in 2022 
+I have joined Epam as an intern during my college.
+domain - java.
+
+During internship we were trained on many interesting things like naming conventions , design principles, design patterns, unit testing
+java 8 features , multithreading. 
+
+After that we worked on a training project Course Management system. 
+We started with just a
+
+

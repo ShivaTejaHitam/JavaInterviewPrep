@@ -36,7 +36,6 @@ After this again I got an opportunity to work with my first client Google.
 Worked on Manage Email template feature which simplifies the email template updates.
 Worked on exxpiry based onboarding system. 
 Worked on reinserting failed msgs
-worked on automation deployment failures. 
 
 
 

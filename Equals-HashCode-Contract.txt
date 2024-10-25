@@ -1,1 +1,72 @@
+In java equals and hashcode methods form a contract that defines how objects are compared and
+used in hash based collections like HashMap, Hashset, and HashTable. Here's what the contract specifies :
 
+1) If two objects are equal according to equals(), then they must have the same hashCode.
+    This ensures that if two objects are logically the same, they are stored in same bucket in a hashbased collection.
+2) If two objects have same hashCode, they do not necessarily have to be equal.
+    Different objects can have same hashCode(called a collision). In that case equals can be used to confirm if they are logically equal.
+3) Consistency requirement 
+   The equals and hashcode methods should produce consistent results whenever they are called on same objects(provided no modification affecting equality is made.
+
+Example : 
+
+
+class Person {
+  private String name;
+  private int age;
+
+  Person(String name, int age){
+    this.name = name;
+    this.age = age;
+  }
+
+  @Override
+  public boolean equals(Object o){
+    if(this == o) return true;
+    if(o == null || getClass() != o.getClass()) return false;
+    Person person = (Person) o;
+
+    return this.age == person.age && Objects.equals(name,person.name);
+  }
+
+  @Override
+  public int hashCode(){
+    return Objects.hash(name,age);
+  }
+}
+
+public Main{
+  public static void main(String[] args){
+    Person person1 = new Person("Alice",22);
+    Person person2 = new Person("Alice",22);
+
+    // Even though person1 and person2 are different objects, they are equal logically
+    System.out.println("person1.equals(person2): " + person1.equals(person2)); // true
+    System.out.println("person1.hashCode() == person2.hashCode(): " + (person1.hashCode() == person2.hashCode())); // true
+
+    HashSet<Person> people = new HashSet<>();
+    people.add(person1);
+    people.add(person2);
+
+    System.out.println(people.size()); // prints 1
+  }
+}
+
+Explanation for above example :
+  - equals method: Compares two Person objects by checking if they have the same name and age.
+  - hashCode method: Generates a hash code based on name and age fields.
+
+What happens if we override only one out of equals and hashCode :
+If only one of equals or hashCode is overridden without the other, it breaks the contract between these two methods, 
+leading to unpredictable and often incorrect behavior in hash-based collections like HashSet, HashMap, and HashTable. Here’s what can go wrong in each case:
+
+1) Overriding equals without overriding hashCode 
+  If you override equals without hashcode , two equal objects might end up with different hashcodes. This breaks the contract and cause issues while 
+  using hashbased collections. For example if two objects are equal and different hashcodes are generated, duplicate entries might get inserted in Hashset.
+
+2) Overriding hashCode without equals 
+  If you override only hashcode without equals, even though two objects have same hashcode they are not considered equal.This breaks the contract.
+  If the equals is not overridden , the default equals method from Object class is used which just checks for reference equality. This also again causes duplicates entries stored in each bucket
+  
+
+  

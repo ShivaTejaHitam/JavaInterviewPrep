@@ -544,3 +544,13 @@ Key Responsibilities of SpringApplication:
 36) how do you handle exceptions in spring mvc 
 37) how do you handle exceptions in spring boot
 38) what are different ways to achieve synchronization in java
+39) Explain how abstract class is different from interface. When to use what ?
+interfaces :
+	- meant to define a contract that classes can implement. 
+	- multiple inheritence
+	- no state . since there are no instance variables. 
+	- no constructor since there is no state to initialize.
+abstract class :
+	- They provide base class with some behaviour. They are used to share code between closely related classes
+	- have state
+	- has constructor which can be called when  subclass is initialized.

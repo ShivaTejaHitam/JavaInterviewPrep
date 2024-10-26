@@ -1,0 +1,7 @@
+Its primary purpose is to provide a more expressive and safer way to handle potentially absent values (i.e., values that could be null).
+
+Optional.of() is used to create an optional of non-null value . If we try to pass null to Optional.of() it will throw nullpointerException.
+Optional.ofNullablt() is similar to Optional.of() but it will return empty optional if the value is null.
+
+The operations map, flatmap, filter methods of Optional class will return empty optional if there are no values.
+

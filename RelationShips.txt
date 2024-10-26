@@ -1,0 +1,11 @@
+Association:
+
+Generic relationship .Represents the relationship between the objects .
+
+Aggregation :
+
+represents weaker relationship or has-a relationship
+
+Composition :
+
+represents stronger relationship or part-of relationship

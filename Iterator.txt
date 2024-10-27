@@ -5,8 +5,35 @@ collections like ArrayList, Map etc., uses fail fast iterator .
 
 Collections like ConcurrentHashMap , CopyOnWriteArrayList uses fail safe iterator. They can be used to modify along with iteration.
 they perform iteration on a snapshot of the collection. So if the collection size is 3 it prints only 3 elements even if you add elements during iteration.
+But this is not efficient for large datasets because copying is intensive
+
+import java.util.Iterator;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+
+public class Interview {
+    public static void main(String[] args) {
+        CopyOnWriteArrayList<String> list = new CopyOnWriteArrayList<>();
+        list.add("One");
+        list.add("Two");
+        list.add("Three");
+
+        // Get the iterator
+        Iterator<String> iterator = list.iterator();
+
+        while (iterator.hasNext()) {
+            list.add("Four"); // This will cause ConcurrentModificationException
+
+            System.out.println(iterator.next());
+            // Modifying the collection while iterating
+        }
+    }
+}
+
 
 another way to do concurrent modification is iterator.remove method.
+
+
 another way is using listIterator 
 
 another way is to perform removal operations on copy of collection.

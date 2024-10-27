@@ -7,6 +7,7 @@ Collections like ConcurrentHashMap , CopyOnWriteArrayList uses fail safe iterato
 they perform iteration on a snapshot of the collection. So if the collection size is 3 it prints only 3 elements even if you add elements during iteration.
 
 another way to do concurrent modification is iterator.remove method.
+another way is using listIterator 
 
 another way is to perform removal operations on copy of collection.
 

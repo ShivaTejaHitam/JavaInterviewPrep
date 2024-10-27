@@ -1,0 +1,13 @@
+considerations while using parallel streams ?
+ - Avoid stateful or synchronized operations as they can lead to unpredicatable results.
+ - parallel streams cannot guarantee the order. use ForEachOrdered for order
+ - use only for large datasets. Because they introduce overhead for small datasets due to thread management.
+ - when device is multicore
+
+ working of parallel streams 
+   - internally forkjoin pool is used .
+   - each thread is assigned chunk of work. Which ensures efficient utilization of all cores in the cpu
+   - spliterator is used to divide data in to chunks
+
+List<Integer> list = Arrays.asList(1,2,3,4,5);
+list.parallelStream().forEach(System.out::println);

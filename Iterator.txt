@@ -31,10 +31,10 @@ public class Interview {
 }
 
 
-another way to do concurrent modification is iterator.remove method.
+another way to do concurrent modification is iterator.remove method. But it does not support add method
 
 
-another way is using listIterator 
+another way is using listIterator . It supports bidirectional. it supports add, remove , set , hasPrevious
 
 another way is to perform removal operations on copy of collection.
 

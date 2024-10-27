@@ -1,0 +1,12 @@
+when we try to modify the collection(add or remove) while traversing it throws concurrentModificationException. 
+
+collections like ArrayList, Map etc., uses fail fast iterator . 
+
+
+Collections like ConcurrentHashMap , CopyOnWriteArrayList uses fail safe iterator. They can be used to modify along with iteration.
+they perform iteration on a snapshot of the collection. So if the collection size is 3 it prints only 3 elements even if you add elements during iteration.
+
+another way to do concurrent modification is iterator.remove method.
+
+another way is to perform removal operations on copy of collection.
+

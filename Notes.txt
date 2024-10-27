@@ -6,6 +6,10 @@ lambda expressions, functional interfaces , Optional,  CompletableFuture , defau
 Can we extend interfaces from another interface? 
 Yes we can use extend keyword similar to classes
 
+what is Arrays.asList() ?
+This method is used to create a fixed size list from an array or elements.
+
+
 
 1.What is bean in Spring? 
 In Spring, the objects that form the backbone of your application and that are managed by Spring IoC Container are called beans. Beans are instantiated, assembled, and managed by a Spring IoC container.

@@ -1,0 +1,17 @@
+The order of execution for SQL statements follows a specific sequence, especially in the context of a SELECT statement. Here's the general order of execution for SQL statements:
+
+FROM: Determines the tables from which to retrieve the data. Joins are processed at this stage.
+
+WHERE: Filters the rows based on the specified conditions.
+
+GROUP BY: Groups the filtered rows based on one or more columns.
+
+HAVING: Filters the groups formed by the GROUP BY clause based on specified conditions.
+
+SELECT: Determines which columns or expressions to return in the result set. This includes computed columns and aggregate functions.
+
+DISTINCT: Removes duplicate rows from the result set if specified.
+
+ORDER BY: Sorts the result set based on one or more columns.
+
+LIMIT/OFFSET: Restricts the number of rows returned, if specified.

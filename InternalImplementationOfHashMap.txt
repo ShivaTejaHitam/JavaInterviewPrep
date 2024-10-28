@@ -1,0 +1,12 @@
+The HashMap in Java is a part of the Java Collections Framework and is used to store key-value pairs. 
+  It is implemented as a hash table and allows for efficient data retrieval. Below is a detailed explanation of its internal implementation,
+  along with code snippets illustrating its core components.
+
+Internal Structure of HashMap
+Buckets: The main data structure used by a HashMap is an array of buckets. Each bucket can hold multiple entries, which are key-value pairs. Each entry in a bucket is linked to a list (or tree, in case of a high collision).
+
+Hash Function: The key is processed using a hash function to compute an index in the bucket array. The default hash function is derived from the hashCode() method of the key object.
+
+Collision Handling: When two keys hash to the same index (a collision), the HashMap uses a linked list (or a balanced tree starting from Java 8) to store multiple entries in the same bucket.
+
+Load Factor and Threshold: The load factor determines when to increase the capacity of the HashMap. The default load factor is 0.75, meaning the HashMap will resize when 75% of the buckets are filled. The threshold is the product of the current capacity and the load factor.

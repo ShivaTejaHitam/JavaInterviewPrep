@@ -6,6 +6,7 @@ JPA architecture -
 
 @Transient Annotation - if we do not want a attibute to be stored in db, we can mark it with @Transient. For eg : age field which can be derived from dob
 
+entity lifecycle
 methods in entityManager - persist, remove, merge, find
 
 conditions for entity - class and member variables and methods should not be final. It should have a field with @Id annotation

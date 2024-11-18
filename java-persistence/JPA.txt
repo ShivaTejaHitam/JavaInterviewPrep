@@ -17,6 +17,7 @@ SEQUENCE -
 TABLE - 
 
 
+
 mappedBy field which makes the mapping happen
 
 manytoMany  - cascasetype.persist and cascadetype.merge , @jointable(joincolumns,inversejoincolumns)
@@ -27,3 +28,10 @@ inheritance mapping strategies (use @Inheritance annotation with different prope
 3) Table per concrete entity class 
 
 sessionFactory
+
+
+JPQL
+JPQL returns results in the form of entities instead of rows 
+Query query = entityManager.createQuery("Select * ...");
+query.setParameter("",dsdfsf);
+List<Employee> list = query.getResultList();

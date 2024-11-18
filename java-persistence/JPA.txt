@@ -1,0 +1,29 @@
+JPA is an abstraction on top of JDBC that makes easy to map java objects to Relational databases and vice versa.
+It eliminates boilerplate code like setting up database connections , writing queries etc
+
+
+JPA architecture - 
+
+@Transient Annotation - if we do not want a attibute to be stored in db, we can mark it with @Transient. For eg : age field which can be derived from dob
+
+methods in entityManager - persist, remove, merge, find
+
+conditions for entity - class and member variables and methods should not be final. It should have a field with @Id annotation
+
+Generation types  for primary key : 
+AUTO - it is default one. jpa provider will choose appropriate strategy
+IDENTITY - 
+SEQUENCE - 
+TABLE - 
+
+
+mappedBy field which makes the mapping happen
+
+manytoMany  - cascasetype.persist and cascadetype.merge , @jointable(joincolumns,inversejoincolumns)
+fetchtypes -eager, lazy etc 
+inheritance mapping strategies (use @Inheritance annotation with different properties):
+1) Single table per class  
+2) Joined subclass strategy
+3) Table per concrete entity class 
+
+sessionFactory

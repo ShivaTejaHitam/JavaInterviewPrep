@@ -35,3 +35,10 @@ JPQL returns results in the form of entities instead of rows
 Query query = entityManager.createQuery("Select * ...");
 query.setParameter("",dsdfsf);
 List<Employee> list = query.getResultList();
+
+Native Query :
+Native query also returns results in the form of entities instead of rows 
+query has to be changed based on underlying db
+
+Criteria API :
+

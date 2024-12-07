@@ -1,1 +1,15 @@
+what are steps of jdbc connectivity ?
+Register driver class
+Class.forName("oracle.jdbc.driver.OracleDriver");  
+Connection con = DriverManager.getConnection();
+Statement stmt = con.createStatement();
+ResultSet rs = stmt.executeQuery();
+con.close();
+What are different queryMethods in jdbc ?
+What are different transaction types in jdbc?
+What are different statements in jdbc ? Statement, PreparedStatement, CallableStatement
+
+jdbc with spring :
+
+1) jdbcTemplate, NamedParameterJdbcTemplate
 

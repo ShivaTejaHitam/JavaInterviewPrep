@@ -20,3 +20,45 @@
    Arrays.asList(1,2,3,4,5,6).stream().sorted().limit(3).forEach(System.out::println);
 Arrays.asList(1,2,3,4,5,6).stream().sorted(Comparator.reverseOrder()).limit(3).forEach(System.out::println);
 10) 
+
+11)
+
+12) Find second largest element in array 
+    Arrays.asList(2,1,4,3,5).stream().sorted(Comparator.reverseOrder()).skip(1).findFirst().get();
+13) Sort list of strings in increasing order 
+    Arrays.asList("shiva","is","engineer").stream().sorted(Comparator.comparing(String::length)).collect(Collectors.toList());
+14) Sum and Average of array 
+    Arrays.stream(numbers).sum();
+    Arrays.stream(numbers).average().orElse(0.0);
+15) 
+
+16) Reverse each word of string using stream
+    Arrays.stream(input.split(" ")) // Split the string into words
+                .map(word -> new StringBuilder(word).reverse().toString()) // Reverse each word
+                .collect(Collectors.joining(" "));
+17) Find sum of first 10 natural numbers
+   IntStream.rangeClosed(1,10).sum();
+18) 
+19) print the first 10 even numbers.
+    Instream.rangeClosed(1,20).filter(n -> n%2 == 0).forEach(System.out::println);
+20) Find the most repeated element in the array.
+   Arrays.stream(numbers) // Convert array to stream
+                .boxed() // Convert int to Integer to work with Collectors
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting())) // Count occurrences
+                .entrySet()
+                .stream()
+                .max(Map.Entry.comparingByValue()) // Find the entry with the max value
+                .map(Map.Entry::getKey) // Extract the key (element)
+                .orElseThrow(() -> new IllegalArgumentException("Array is empty"));
+21) 
+22).
+23) 
+24) Find first repeated character in string
+    Arrays.stream("hello".split("")).mapToObj( c -> (char) c).filter(c -> s.indexOf(c) == s.lastIndexOf(c)).findFirst().get();
+25) 
+26) 
+27) Find first 10 odd numbers
+Instream.rangeClosed(1,20).filter(n -> n%2 == 0).forEach(System.out::println);.
+28) Find last element of array,
+   Arrays.asList(1,2,3,4,5).stream().reduce((first,second)->second).get();
+29)

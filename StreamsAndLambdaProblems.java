@@ -54,7 +54,9 @@ Arrays.asList(1,2,3,4,5,6).stream().sorted(Comparator.reverseOrder()).limit(3).f
 22).
 23) 
 24) Find first repeated character in string
-    Arrays.stream("hello".split("")).mapToObj( c -> (char) c).filter(c -> s.indexOf(c) == s.lastIndexOf(c)).findFirst().get();
+    String s = "hello";
+        
+       System.out.println(Arrays.stream("hello".split("")).filter(c -> s.indexOf(c) == s.lastIndexOf(c)).findFirst().get());
 25) 
 26) 
 27) Find first 10 odd numbers

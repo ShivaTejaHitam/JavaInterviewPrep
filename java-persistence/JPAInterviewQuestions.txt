@@ -1,0 +1,54 @@
+For someone with 3 years of experience, JPA interview questions are likely to cover intermediate to advanced topics. Here's a curated list:
+
+Basic JPA Concepts
+What is JPA, and how does it differ from Hibernate?
+What are the key components of JPA?
+Explain EntityManager, EntityTransaction, and Query.
+What is the role of the persistence.xml file in a JPA application?
+Entity Basics
+What is an entity in JPA? How do you define it?
+What are the rules for defining a primary key in JPA?
+What are the differences between @Id and @GeneratedValue? Explain different generation strategies.
+How do you define composite primary keys in JPA?
+Use of @Embeddable and @EmbeddedId.
+Relationships
+What are the different types of relationships in JPA?
+Explain @OneToOne, @OneToMany, @ManyToOne, and @ManyToMany with examples.
+What is the difference between mappedBy and @JoinColumn in JPA relationships?
+How do you manage bidirectional relationships in JPA?
+What is the role of CascadeType and FetchType in JPA relationships?
+Explain orphan removal in JPA. How is it different from cascade delete?
+Querying
+What is JPQL, and how is it different from SQL?
+What are named queries in JPA, and how do you define and use them?
+How can you execute native SQL queries in JPA?
+What are the common annotations for defining queries in JPA?
+Examples: @Query, @NamedQuery, @NativeQuery.
+What are criteria queries, and when should you use them?
+Transactions and Persistence Context
+What is the persistence context in JPA?
+Explain the difference between EntityManager.persist() and EntityManager.merge().
+What are the different types of transactions in JPA?
+How does the persistence context handle the dirty checking mechanism?
+Caching
+What is first-level cache in JPA? How is it managed?
+What is the difference between first-level and second-level caching in JPA?
+How do you enable and use second-level cache in JPA with Hibernate?
+Advanced Topics
+What is the difference between EAGER and LAZY fetching in JPA?
+What are entity lifecycle callbacks? Explain annotations like @PrePersist, @PostLoad, etc.
+How does JPA handle inheritance? What are the different strategies?
+Examples: SINGLE_TABLE, TABLE_PER_CLASS, JOINED.
+What is optimistic locking, and how is it implemented in JPA?
+How do you implement pessimistic locking in JPA?
+What are DTO projections, and why are they used in JPA?
+Performance and Optimization
+What are the common performance pitfalls in JPA, and how can they be avoided?
+What is the N+1 select problem in JPA? How can it be resolved?
+How do you batch insert or update data in JPA?
+How does JPA handle pagination?
+Miscellaneous
+How do you handle database migrations in a JPA-based application?
+What are some common exceptions in JPA, and how do you handle them?
+How do you test JPA repositories?
+Explain the role of Spring Data JPA in simplifying repository management.

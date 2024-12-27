@@ -1,0 +1,60 @@
+Here are some Spring Microservices interview questions for a developer with 3 years of experience:
+
+Basic Questions
+What are microservices? How do they differ from monolithic architecture?
+What are the key benefits of using microservices architecture?
+What are some challenges in implementing microservices?
+What is the role of Spring Boot in microservices?
+How do you create a microservice in Spring Boot?
+
+Spring Cloud Basics
+What is Spring Cloud, and why is it used in microservices?
+What is Service Discovery? Explain with an example.
+What is Netflix Eureka? How does it work with Spring Boot?
+What is Feign Client? How is it used for inter-service communication?
+Explain the purpose of Spring Cloud Config Server.
+What is a Circuit Breaker? How does Spring Cloud Circuit Breaker help in fault tolerance?
+Advanced Concepts
+What is API Gateway? How is it implemented using Spring Cloud Gateway?
+What is Hystrix, and why is it used?
+What is distributed tracing, and how do you implement it in Spring Microservices?
+What is load balancing? How is it achieved in Spring Microservices?
+How do you handle session consistency in microservices?
+Data and Communication
+How do microservices share data?
+What are synchronous and asynchronous communication methods in microservices?
+What is the difference between REST and gRPC for communication?
+How do you ensure data consistency in microservices (e.g., Saga Pattern)?
+Explain event-driven architecture. How would you implement it in a Spring-based microservices system?
+Deployment and Security
+What is Docker, and how do you containerize a Spring Boot microservice?
+What is Kubernetes, and how does it help in deploying microservices?
+How do you secure microservices using Spring Security and OAuth2?
+What is JWT, and how is it used in securing microservices?
+
+Testing and Monitoring
+How do you test a microservice in isolation?
+What tools do you use for testing microservices (e.g., Postman, MockMVC)?
+What is centralized logging? How do you implement it in Spring Microservices?
+What is Prometheus and Grafana? How do they help in monitoring microservices?
+How would you handle performance issues in a Spring Microservices architecture?
+Scenario-Based Questions
+How would you design a microservices architecture for an e-commerce application?
+What happens if a service registry like Eureka goes down? How do you handle it?
+What would you do if a downstream service becomes unresponsive?
+How would you manage versioning in a microservices-based application?
+How do you scale individual microservices?
+Let me know if you want answers to specific questions!
+
+
+
+
+
+
+
+
+
+
+
+
+

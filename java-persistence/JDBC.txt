@@ -1,0 +1,89 @@
+Here are some JDBC and Spring JDBC interview questions tailored for someone with 3 years of experience:
+
+JDBC Interview Questions
+Core Concepts:
+
+What is JDBC, and why is it used in Java applications?
+Explain the steps involved in connecting to a database using JDBC.
+What are DriverManager and DataSource in JDBC? How are they different?
+What is the purpose of the Connection interface in JDBC?
+How do you handle transactions in JDBC?
+Advanced Features:
+
+What is a PreparedStatement, and how does it differ from a Statement?
+Explain the use of CallableStatement. How is it used to call stored procedures?
+How can you batch SQL statements in JDBC?
+What are the different types of JDBC drivers? Which one is commonly used in production environments?
+Error Handling:
+
+How do you handle SQL exceptions in JDBC?
+What is the purpose of the SQLException chaining mechanism?
+Performance:
+
+What are some performance best practices when using JDBC?
+How do you handle large result sets in JDBC?
+Design & Implementation:
+
+How do you handle connection pooling in JDBC?
+Explain the difference between JDBC and ORM frameworks like Hibernate.
+Spring JDBC Interview Questions
+Core Concepts:
+
+What is Spring JDBC? How does it differ from plain JDBC?
+Explain the role of the JdbcTemplate class in Spring JDBC.
+How do you configure a datasource in a Spring application?
+What are the advantages of using Spring JDBC over standard JDBC?
+Operations:
+
+How do you perform basic CRUD operations using JdbcTemplate?
+What are the differences between queryForObject, queryForList, and queryForMap methods?
+How do you handle named parameters in Spring JDBC?
+Transactions:
+
+How do you handle transactions in Spring JDBC?
+What is the difference between programmatic and declarative transaction management in Spring?
+How is @Transactional annotation used in Spring?
+Error Handling:
+
+How does Spring handle exceptions in Spring JDBC?
+What is the DataAccessException hierarchy in Spring JDBC?
+Row Mapping:
+
+What is the role of the RowMapper interface?
+How does ResultSetExtractor differ from RowMapper?
+When would you use a BeanPropertyRowMapper?
+Best Practices:
+
+What are some common pitfalls to avoid when using Spring JDBC?
+How do you ensure database connection efficiency in a Spring application?
+Integration:
+
+How can you integrate Spring JDBC with other modules, such as Spring Boot?
+How do you test Spring JDBC-based DAO methods?
+Scenario-Based Questions
+Implement a function that fetches employee details by their ID using both plain JDBC and Spring JDBC.
+Write a Spring DAO layer method for inserting a list of records in a batch.
+How would you handle a situation where multiple threads need to perform database operations concurrently?
+Design a Spring-based application to perform transactions across two databases.
+How would you debug performance issues in a Spring JDBC application?
+Practical Coding Questions
+Write a code snippet to perform the following using JdbcTemplate:
+
+Fetch a list of users from a users table.
+Map the result to a list of Java objects.
+Demonstrate how to use @Transactional to manage transactions in a method that involves multiple database operations.
+
+Given a table orders, write a method to fetch the total sales grouped by product. Use both plain JDBC and Spring JDBC.
+
+Implement a method using Spring JDBC to call a stored procedure that calculates the total sales for a given date range.
+
+Write a function to demonstrate handling and logging SQL exceptions using Spring’s DataAccessException.
+
+Would you like me to expand on any specific question or area?
+
+
+
+
+
+
+

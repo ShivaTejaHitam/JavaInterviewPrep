@@ -26,6 +26,7 @@ The JVM is the engine that drives Java applications.It provides a platform-indep
 Key Responsibilities of JVM : 
 1) class Loading :
    - The Class Loader loads .class files in to memory, verifying their integrity and correctness.
+    loading , linking and initialization.
 2) Bytecode verification :
    - Ensures the bytecode adheres to java security standards.
 3) Execution:

@@ -22,11 +22,11 @@ Uses of JRE :
  - If you are only running and not developing java applications , only JRE is enough
 
 JVM (java Virtual Machine) :
-The JVM is the engine that drives Java applications.It provides a platform-independent runtime environment by interpreting Java bytecode.
+The JVM is the engine that drives Java applications.It provides a platform-independent runtime environment by interpreting Java bytecode. 
 Key Responsibilities of JVM : 
 1) class Loading :
    - The Class Loader loads .class files in to memory, verifying their integrity and correctness.
-    loading , linking and initialization.
+    loading , linking and initialization. BootstrapClassloader,ExtensionClassloader,ApplicationClassLoader.
 2) Bytecode verification :
    - Ensures the bytecode adheres to java security standards.
 3) Execution:
@@ -54,6 +54,7 @@ Stack Memory:
 Execution Engine:
   Executes bytecode.
   Includes the JIT compiler and an interpreter.
+  garbage collector.
 Native Method Interface (JNI):
   Facilitates interaction between Java and native (non-Java) applications.
 Native Method Libraries:

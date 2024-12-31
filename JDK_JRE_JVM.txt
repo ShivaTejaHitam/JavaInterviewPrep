@@ -1,0 +1,64 @@
+Java Development Kit (JDK) :
+JDK is a software development kit required to develop java applications. 
+It provides tools,libraries , and resources to write, compile and debug java programs.
+
+Components of JDK:
+ - javac . It converts human readable java code in to byte code (.class files) which can be executed in to JVM.
+ - JRE - A part of JDK that provides the environment to run java applications.
+ - Development tools - Includes tools like javadoc, javap, jconsole, and jdb for documentation, debugging and profiling etc.
+ - Header files and libraries - Includes standard class libraries and APIs required during the development phase.
+ 
+
+Java Runtime Environment (JRE) : 
+ The JRE is a runtime environment that provides the necessary libraries and 
+infrastructure to execute Java applications. It contains the JVM and the core libraries.
+Components of JRE : 
+  - JVM ( Java Virtual Machine) - executes the bytecode
+  - Java class libraries - pre-built classes and methods for tasks like I/O, networking, collections and more.
+  - Class loader - Dynamically loads classes in to memory as needed.
+Uses of JRE : 
+ - Running java programs
+ - provides all necessary dependencies to execute java bytecode.
+ - If you are only running and not developing java applications , only JRE is enough
+
+JVM (java Virtual Machine) :
+The JVM is the engine that drives Java applications.It provides a platform-independent runtime environment by interpreting Java bytecode.
+Key Responsibilities of JVM : 
+1) class Loading :
+   - The Class Loader loads .class files in to memory, verifying their integrity and correctness.
+2) Bytecode verification :
+   - Ensures the bytecode adheres to java security standards.
+3) Execution:
+  Executes the bytecode via:
+  Interpreter: Reads and executes bytecode line by line.
+  JIT Compiler (Just-In-Time): Converts frequently executed bytecode into native machine code for performance optimization.
+4) Memory Management:
+  Handles Heap and Stack Memory:
+Heap: Stores objects and class instances.
+Stack: Handles method calls and local variables.
+5) Garbage Collection 
+   Automatically improves unused objects to free memory.
+6) Platform Independence
+  Converts bytecode in to platform specific machine instructions.\
+
+Architecture of JVM
+Class Loader Subsystem:
+  Loads classes into the JVM memory.
+Method Area:
+  Stores class structure, metadata, and static variables.
+Heap Memory:
+  Stores objects created by the program.
+Stack Memory:
+  Holds method call information and local variables.
+Execution Engine:
+  Executes bytecode.
+  Includes the JIT compiler and an interpreter.
+Native Method Interface (JNI):
+  Facilitates interaction between Java and native (non-Java) applications.
+Native Method Libraries:
+  Libraries written in native languages like C or C++.
+
+
+
+
+

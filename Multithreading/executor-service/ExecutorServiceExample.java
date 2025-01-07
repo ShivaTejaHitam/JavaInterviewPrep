@@ -1,4 +1,10 @@
-// "static void main" must be defined in a public class.
+// newFixedThreadPool
+// newCachedThreadPool
+// newSingleThreadExecutor
+// submit(Runnable runnable)
+// submit(Callable callable)
+
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 

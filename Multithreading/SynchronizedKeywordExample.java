@@ -1,3 +1,5 @@
+
+// if an instance method is synchronized then only one thread can access that method as well as other synchronized methods of that object at a time
 import java.util.*;
 
 class Resource {

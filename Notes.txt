@@ -8,6 +8,7 @@ what is yield method ?
 
 Explain garbage collection.
 
+If we return in try block, does finally execute ? 
 
 Can we extend interfaces from another interface? 
 Yes we can use extend keyword similar to classes

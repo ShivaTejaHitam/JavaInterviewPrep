@@ -6,31 +6,37 @@ Explain the difference between EntityManager and EntityManagerFactory.
 How do you define a JPA entity in Spring? What are the required annotations?
 What is the significance of the @Entity, @Table, and @Id annotations?
 How does Spring Data JPA handle transactions by default?
+
 Repositories and Queries
 What are the different types of Spring Data JPA repositories?
 Explain the purpose of the JpaRepository interface.
 How do you create custom query methods in a repository? Can you provide an example?
 What is the difference between @Query and query derivation methods?
 How do you write a native SQL query in Spring Data JPA?
+
 Relationships
 Explain the different types of relationships in JPA (One-to-One, One-to-Many, Many-to-One, Many-to-Many) and their annotations.
 How do you handle bi-directional relationships in Spring Data JPA?
 What is the role of the mappedBy attribute in relationships?
 How can you optimize fetching strategies (e.g., lazy vs. eager loading) in relationships?
+
 Advanced Features
 What is the difference between @OneToMany and @ManyToMany annotations?
 How do you implement pagination and sorting in Spring Data JPA?
 Explain the purpose of EntityGraph in optimizing queries.
 How do you handle large datasets in Spring Data JPA?
 What is the difference between merge() and persist() in JPA?
+
 Performance and Caching
 What are N+1 query problems, and how do you avoid them in Spring Data JPA?
 How can you enable second-level caching in Spring Data JPA?
 What is the role of Hibernate in Spring Data JPA?
+
 Transaction Management
 How do you manage transactions in Spring Data JPA?
 Explain the difference between @Transactional and @EnableTransactionManagement.
 How does Spring Data JPA handle optimistic and pessimistic locking?
+
 Real-World Scenarios
 How do you handle database migrations in a Spring Data JPA project?
 Have you worked with auditing in Spring Data JPA? Explain how you implemented it.

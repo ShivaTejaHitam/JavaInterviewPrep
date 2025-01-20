@@ -3,6 +3,11 @@
 what are new features of java 8 ?
 lambda expressions, functional interfaces , Optional,  CompletableFuture , default methods ,  new Date and Time API using package java.time
 
+What is the advantages of spring boot over spring mvc ?
+ 1) Dependency Management (starters are available)
+ 2) Autoconfiguration
+ 3) Embedded server
+
 what is the design pattern used in ApplicationContext and BeanFactory ?
 what is yield method ?
 

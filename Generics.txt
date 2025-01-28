@@ -21,6 +21,7 @@ Wildcards:
 Difference between Wildcard and generic :
 in generic all must be of type T
 whereas wildcard type gives flexibility
+wildcard method supports LowerBound
 
 public void computeList(List<? extends Number> source, List<? extends Number> destination){ // you can pass Integers to one list and Double to other}
 

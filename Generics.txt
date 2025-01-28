@@ -14,16 +14,19 @@ vehicles = buses; // does not support
 
 Wildcards:
 
-- Upperbound
-- LowerBound
-- Unbounded
+- Upperbound  List<? extends Number> 
+- LowerBound  List<? super Number> 
+- Unbounded   List<?>      // supports any object
 
 Difference between Wildcard and generic :
 in generic all must be of type T
 whereas wildcard type gives flexibility
 wildcard method supports LowerBound
+generic support multiple types like T,K,V
 
 public void computeList(List<? extends Number> source, List<? extends Number> destination){ // you can pass Integers to one list and Double to other}
 
 public void computeList(List<T extends Number> source, List<T extends Number> destination) { // you need to pass only elements of type T }
 
+Type Erasure
+conversion of generic code to normal code in byte code

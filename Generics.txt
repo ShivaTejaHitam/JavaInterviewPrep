@@ -1,0 +1,3 @@
+If extending class does not specify type the specific type must be provided for the extended class while extending . 
+Eg : class ColorPrinter extends Printer<String>{}
+Raw type

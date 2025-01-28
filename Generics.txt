@@ -1,3 +1,8 @@
 If extending class does not specify type the specific type must be provided for the extended class while extending . 
 Eg : class ColorPrinter extends Printer<String>{}
-Raw type
+Raw type : if nothing is specified  , the default is Object
+      Eg : List arraylist = new ArrayList();
+
+Bounded :
+ - Upper Bound  class Printer<T extends Number> {}   // accepts Integer,Double etc
+ - Multi Bound  class Printer<T extends ParentClass implements interface1,interface2>{}

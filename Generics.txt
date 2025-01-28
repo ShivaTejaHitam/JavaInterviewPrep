@@ -6,3 +6,23 @@ Raw type : if nothing is specified  , the default is Object
 Bounded :
  - Upper Bound  class Printer<T extends Number> {}   // accepts Integer,Double etc
  - Multi Bound  class Printer<T extends ParentClass implements interface1,interface2>{}
+
+List<Vehicle> vehicles = new ArrayList<Vehicle>();
+List<Bus> buses = new ArrayList<Bus>();
+vehicles = buses; // does not support 
+
+
+Wildcards:
+
+- Upperbound
+- LowerBound
+- Unbounded
+
+Difference between Wildcard and generic :
+in generic all must be of type T
+whereas wildcard type gives flexibility
+
+public void computeList(List<? extends Number> source, List<? extends Number> destination){ // you can pass Integers to one list and Double to other}
+
+public void computeList(List<T extends Number> source, List<T extends Number> destination) { // you need to pass only elements of type T }
+

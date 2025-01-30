@@ -1,5 +1,8 @@
 				Java Interview Preparation
 
+We should not use @Async and @Transactional together.
+When using @Async we should manually configure the threadpool as per our application needs
+
 what are new features of java 8 ?
 lambda expressions, functional interfaces , Optional,  CompletableFuture , default methods ,  new Date and Time API using package java.time
 

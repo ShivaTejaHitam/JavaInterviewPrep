@@ -32,7 +32,7 @@ public class UserDetails{
 }
 
 
-for OneToOne and ManyToOne default fetch type is Eager. If you use Lazy jackson serialization fails. So, use @JsonIgnore
+for OneToOne and ManyToOne default fetch type is Eager. If you use Lazy jackson serialization fails. So, use @JsonIgnore if you really want Eager. Or else use DTO 
 for OneToMany and ManyToMany default fetch type is Lazy. only loaded when explicitly called.
 
 

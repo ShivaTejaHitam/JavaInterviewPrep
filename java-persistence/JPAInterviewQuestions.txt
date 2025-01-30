@@ -1,7 +1,35 @@
 For someone with 3 years of experience, JPA interview questions are likely to cover intermediate to advanced topics. Here's a curated list:
 
 JPA implementation internally uses JDBC .
+How do you create composite primary key in JPA:
 
+Use @EmbeddableId for compositeKey
+
+for eg :
+
+@Entity
+public class UserAddress{
+@EmbeddedId
+UserAddressCK userAddressCk; 
+
+private String country;
+}
+@Embeddable
+class UserAddressCK {
+   private String street;
+   private String city;
+}
+
+@Entity
+public class UserDetails{
+
+  @OneToOne
+  @JoinColumns({
+        @JoinColumn(name="",referencedColumnName="street"),
+        @JoinColumn(name="",referencedColumnName="city"),
+  })
+  private UserAddress userAddress;
+}
 
 Basic JPA Concepts
 

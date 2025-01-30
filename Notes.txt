@@ -3,6 +3,10 @@
 We should not use @Async and @Transactional together.
 When using @Async we should manually configure the threadpool as per our application needs
 
+Reentrant locks do not allow multiple threads to access the critical section of different objects.
+Synchronized is a monitor lock which aquires lock on critical section of single object. Two different threads can access critical section of synchronized method of different objects simultaneously.
+
+
 what are new features of java 8 ?
 lambda expressions, functional interfaces , Optional,  CompletableFuture , default methods ,  new Date and Time API using package java.time
 

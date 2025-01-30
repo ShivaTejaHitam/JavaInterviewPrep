@@ -31,6 +31,11 @@ public class UserDetails{
   private UserAddress userAddress;
 }
 
+
+for OneToOne and ManyToOne default fetch type is Eager. If you use Lazy jackson serialization fails.
+for OneToMany and ManyToMany default fetch type is Lazy. only loaded when explicitly called.
+
+
 Basic JPA Concepts
 
 What is JPA, and how does it differ from Hibernate?

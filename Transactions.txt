@@ -1,0 +1,17 @@
+Transaction isolation defines how data accessed during transactions is isolated from other concurrent transactions. Spring supports the following isolation levels:
+
+DEFAULT: Uses the database's default isolation level.
+READ_UNCOMMITTED: Allows reading uncommitted changes made by other transactions, leading to dirty reads.
+READ_COMMITTED: Ensures no dirty reads but still allows non-repeatable reads and phantom reads.
+REPEATABLE_READ: Prevents dirty and non-repeatable reads but allows phantom reads.
+SERIALIZABLE: The most restrictive level, preventing dirty reads, non-repeatable reads, and phantom reads. Ensures complete isolation but may reduce concurrency.
+
+Transaction propagation determines how transactions relate to each other. Spring defines several propagation behaviors:
+
+REQUIRED: The default propagation. If a transaction exists, it will join it; otherwise, a new transaction will be created.
+REQUIRES_NEW: Suspends the current transaction and creates a new one.
+SUPPORTS: Runs with a transaction if one exists; otherwise, it runs non-transactionally.
+NOT_SUPPORTED: Runs the method non-transactionally and suspends any existing transaction.
+MANDATORY: Requires an existing transaction; throws an exception if none is present.
+NEVER: Runs without a transaction; throws an exception if one exists.
+NESTED: Runs within a nested transaction if one exists; otherwise, it starts a new transaction.

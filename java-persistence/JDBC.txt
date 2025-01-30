@@ -1,5 +1,7 @@
 Here are some JDBC and Spring JDBC interview questions tailored for someone with 3 years of experience:
 
+JPA internally uses jdbc . JDBC performs better than JPA 
+
 JDBC Interview Questions
 Core Concepts:
 

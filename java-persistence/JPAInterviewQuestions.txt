@@ -18,6 +18,7 @@ Use of @Embeddable and @EmbeddedId.
 Relationships
 What are the different types of relationships in JPA?
 Explain @OneToOne, @OneToMany, @ManyToOne, and @ManyToMany with examples.
+What are unidirectional and bidirectional mapping ?
 What is the difference between mappedBy and @JoinColumn in JPA relationships?
 How do you manage bidirectional relationships in JPA?
 What is the role of CascadeType and FetchType in JPA relationships?

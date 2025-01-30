@@ -1,6 +1,10 @@
 For someone with 3 years of experience, JPA interview questions are likely to cover intermediate to advanced topics. Here's a curated list:
 
+JPA implementation internally uses JDBC .
+
+
 Basic JPA Concepts
+
 What is JPA, and how does it differ from Hibernate?
 What are the key components of JPA?
 Explain EntityManager, EntityTransaction, and Query.

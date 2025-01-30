@@ -26,10 +26,12 @@ Design & Implementation:
 
 How do you handle connection pooling in JDBC?
 Explain the difference between JDBC and ORM frameworks like Hibernate.
+
 Spring JDBC Interview Questions
 Core Concepts:
 
-What is Spring JDBC? How does it differ from plain JDBC?
+What is Spring JDBC? How does it differ from plain JDBC? 
+It avoids boilerplate code like driver class loader, connection making, exception handling,closing db connection , manual handling of connection pool etc
 Explain the role of the JdbcTemplate class in Spring JDBC.
 How do you configure a datasource in a Spring application?
 What are the advantages of using Spring JDBC over standard JDBC?

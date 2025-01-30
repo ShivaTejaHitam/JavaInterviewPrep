@@ -55,7 +55,7 @@ What are unidirectional and bidirectional mapping ?
 What is the difference between mappedBy and @JoinColumn in JPA relationships?
 How do you manage bidirectional relationships in JPA?
 How do you handle infinite recursion in bidirectional mapping ?
-@JsonManagedReference and @JsonBackReference
+@JsonManagedReference and @JsonBackReference and @JsonIdentityInfo
 
 What is the role of CascadeType and FetchType in JPA relationships?
 Explain orphan removal in JPA. How is it different from cascade delete?

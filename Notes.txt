@@ -20,7 +20,7 @@ what is yield method ?
 
 Explain garbage collection.
 
-If we return in try block, does finally execute ? 
+If we return in try block, does finally execute ? yes 
 What is thymeleaf ?
 How string immutablility provides thread safety ?
 

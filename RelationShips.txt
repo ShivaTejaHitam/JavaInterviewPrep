@@ -4,8 +4,8 @@ Generic relationship .Represents the relationship between the objects .
 
 Aggregation :
 
-represents weaker relationship or has-a relationship
+represents weaker relationship or has-a relationship. Eg : Employee and Address
 
 Composition :
 
-represents stronger relationship or part-of relationship
+represents stronger relationship or part-of relationship. Eg: Car and Engine

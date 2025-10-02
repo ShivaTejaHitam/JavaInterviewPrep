@@ -576,3 +576,4 @@ abstract class :
 	- They provide base class with some behaviour. They are used to share code between closely related classes
 	- have state
 	- has constructor which can be called when  subclass is initialized.
+

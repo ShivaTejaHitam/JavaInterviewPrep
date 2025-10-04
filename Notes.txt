@@ -1,5 +1,6 @@
 				Java Interview Preparation
 
+classes have only two access specifiers public and default(nothing)
 We should not use @Async and @Transactional together.
 When using @Async we should manually configure the threadpool as per our application needs
 

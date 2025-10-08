@@ -6,3 +6,5 @@ Exception:
    - stack trace etc
 - Runtime system use this exception and checks which class can handle this. If no class or method is handling it the program terminates and stack trace is printed
 
+
+Checked Exception - code will not compile if checked exception is not handled.

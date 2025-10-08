@@ -22,4 +22,25 @@ arguments expected by ThreadPoolExecutor
 - keepAliveTime- idle threads are terminated after this much time
 - TimeUnit - unit for keepAliveTime
 - workQueue(blockingQueue) - queue used to hold tasks before they are picked up by the worker threads
+- threadFeactory - interface used by threadPoolExecutor to create new threads. It provides options for customThreadName, priority, setDeamon etc
+- RejectedExecutionHanlder - used to provide handlers to execute rejected tasks
 
+
+
+Life Cycle of ThreadPoolExecutor
+- Running - can accept new tasks
+- shutDown() -> Shutdown - won't accept new tasks, but continue already in progress tasks
+- shutDownNow()-> Stop - won't accept new tasks and also stop currently running tasks
+- Terminated -> All threads are eliminated
+
+How do you choose minPoolSize, maxPoolSize and queueSize ? 
+It depends on several factors 
+ - CPU core size if you create more threads than no of cores, most of the time goes in context switching
+ - JVM memory - If there is no enough memory, high no of cores do not help. 
+ - nature of task - more threads for IO intensive and less for CPU intensive
+ - concurrency requirement
+ - memory demanded by request or task
+ - Throughput required 
+
+Formula for approx no of threads required
+No of threads = No of Cores * (1 + request waiting time / processing time)

@@ -12,6 +12,14 @@ After that the tasks are pushed in to queue. If the thread gets idle it picks th
 If the queue is filled and all minPool threads are busy, for every new task the new thread is created in thread pool until the maxPoolSize is utilized.
 After the queue and maxPool size are filled, new tasks are rejected.
 
+Why first we put in to the queue instead of creating new threads ? 
+To avoid creating more threads because more threads = more overhead. that is why threads are created only during peak
+
+allowCoreThreadTimeOut - if this property is set to true, idle thread is kept alive until keepAlive time.
 arguments expected by ThreadPoolExecutor 
 - corePoolSize - the minimum number of threads should be available in threadpool always 
-- maxPoolSize - 
+- maxPoolSize - the maximum number of threads allowed in thread pool
+- keepAliveTime- idle threads are terminated after this much time
+- TimeUnit - unit for keepAliveTime
+- workQueue(blockingQueue) - queue used to hold tasks before they are picked up by the worker threads
+

@@ -1,0 +1,7 @@
+Exception: 
+- it is an event that occurs during the execution of the program
+- it disrupts the normal flow of the program
+- it creates the Exception object which contains information about the error like 
+   - type of exception and msg
+   - stack trace etc
+- Runtime system use this exception and checks which class can handle this. If no class or method is handling it the program terminates and stack trace is printed

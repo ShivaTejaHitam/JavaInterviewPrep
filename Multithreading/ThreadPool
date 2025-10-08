@@ -3,3 +3,15 @@
 3) Creation of Threads is an overhead like creating space and managing states. Threadpool helps in minimizing this overhead.
 4) If more threads are created for each task, the context switching increases because more threads involves more context switching and it is expensive
 5) Also thread pool abstract the process of managing  thread lifecycle
+
+
+Working : 
+ThreadPoolExecutor has queue, threadpool .
+whenever task comes to the queue , the thread pool picks the task and executes it until the min no of threads in thread pool are utilized
+After that the tasks are pushed in to queue. If the thread gets idle it picks the tasks from queue.
+If the queue is filled and all minPool threads are busy, for every new task the new thread is created in thread pool until the maxPoolSize is utilized.
+After the queue and maxPool size are filled, new tasks are rejected.
+
+arguments expected by ThreadPoolExecutor 
+- corePoolSize - the minimum number of threads should be available in threadpool always 
+- maxPoolSize - 

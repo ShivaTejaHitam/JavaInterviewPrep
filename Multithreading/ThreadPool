@@ -2,3 +2,4 @@
 2) Once task is completed, worker thread goes back to the Thread Pool and wait for new task to be assigned. So that the thread can be reused.
 3) Creation of Threads is an overhead like creating space and managing states. Threadpool helps in minimizing this overhead.
 4) If more threads are created for each task, the context switching increases because more threads involves more context switching and it is expensive
+5) Also thread pool abstract the process of managing  thread lifecycle

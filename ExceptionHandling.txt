@@ -8,3 +8,5 @@ Exception:
 
 
 Checked Exception - code will not compile if checked exception is not handled.
+
+Try block should be followed by either catch block or finally 

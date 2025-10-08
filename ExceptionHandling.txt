@@ -9,4 +9,5 @@ Exception:
 
 Checked Exception - code will not compile if checked exception is not handled.
 
-Try block should be followed by either catch block or finally 
+Try block should be followed by either catch block or finally .
+If a checked exception is not thrown by a method, we should not write a catch block to handle it. If we write it leads to compilation issue

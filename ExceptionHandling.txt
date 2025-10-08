@@ -5,3 +5,4 @@ Exception:
    - type of exception and msg
    - stack trace etc
 - Runtime system use this exception and checks which class can handle this. If no class or method is handling it the program terminates and stack trace is printed
+

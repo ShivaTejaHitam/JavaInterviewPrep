@@ -13,3 +13,5 @@ Load Factor and Threshold: The load factor determines when to increase the capac
 
 The load factor minimizes the probability of collision by increasing the no of buckets which results in distribution of data across more buckets.
 The treefy improves performance when collision occurs
+
+HashMap allows a null key

@@ -10,4 +10,6 @@ Hash Function: The key is processed using a hash function to derive hash and div
 Collision Handling: When two keys hash to the same index (a collision), the HashMap uses a linked list (or a balanced tree starting from Java 8) to store multiple entries in the same bucket. That is why in worst case the complexity becomes O(n).
 
 Load Factor and Threshold: The load factor determines when to increase the capacity of the HashMap. The default load factor is 0.75, meaning the HashMap will resize when 75% of the buckets are filled. The threshold is the product of the current capacity and the load factor. 
+
 The load factor minimizes the probability of collision by increasing the no of buckets which results in distribution of data across more buckets.
+The treefy improves performance when collision occurs

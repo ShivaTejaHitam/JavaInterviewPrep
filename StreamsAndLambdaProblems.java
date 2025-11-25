@@ -1,3 +1,84 @@
+Absolutely! Let’s create a **mental map / diagram** to easily remember **types of streams** in Java 8 and **conversion between them**. I’ll describe it in a structured way so it can be drawn or visualized quickly.
+
+---
+
+### **1. Types of Streams in Java 8**
+
+Think of streams as three main categories:
+
+```
+Streams
+│
+├─ Reference Stream (Stream<T>)  → Objects
+├─ Primitive Streams
+│   ├─ IntStream   → int
+│   ├─ LongStream  → long
+│   └─ DoubleStream → double
+└─ Special Stream
+    └─ OptionalStream (OptionalInt/Long/Double) → usually after reductions
+```
+
+* **Reference Stream** → `Stream<String>`, `Stream<Person>`
+* **Primitive Stream** → Optimized for `int`, `long`, `double` to avoid boxing/unboxing.
+
+---
+
+### **2. Conversion Between Streams**
+
+Key conversions:
+
+```
+Reference Stream<T>
+│
+├─ mapToInt(ToIntFunction<T>)    → IntStream
+├─ mapToLong(ToLongFunction<T>)  → LongStream
+├─ mapToDouble(ToDoubleFunction<T>) → DoubleStream
+└─ boxed()  → Stream<T>   (from IntStream/LongStream/DoubleStream back to Stream<T>)
+```
+
+```
+IntStream / LongStream / DoubleStream
+│
+├─ boxed() → Stream<Integer/Long/Double>
+├─ asDoubleStream() (IntStream/LongStream → DoubleStream)
+├─ asLongStream()   (IntStream → LongStream)
+```
+
+---
+
+### **3. Visual Memory Aid**
+
+You can visualize it like a **flow diagram**:
+
+```
+          Stream<T> (Objects)
+            │
+   ┌────────┼────────┐
+   │        │        │
+mapToInt   mapToLong  mapToDouble
+   │        │        │
+IntStream  LongStream DoubleStream
+   │        │        │
+   └────────┼────────┘
+           boxed()
+            │
+         Stream<T>
+```
+
+* Think **“mapToX” goes down to primitives, “boxed()” goes up to objects**.
+* **Primitive streams** are **specialized** for performance.
+
+---
+
+
+
+
+
+
+
+
+
+
 1) Separate odd and even numbers in a list .
    Arrays.asList(1,2,3,4,5).stream().collect(Collectors.partitioningBy(n -> n%2 == 0)).forEach((k,v) -> System.out.println(k + " : " + v));
 2) Remove duplicate elements from list using java 8 streams.

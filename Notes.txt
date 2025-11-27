@@ -1,8 +1,6 @@
 				Java Interview Preparation
 
 classes have only two access specifiers public and default(nothing)
-We should not use @Async and @Transactional together.
-When using @Async we should manually configure the threadpool as per our application needs
 
 Reentrant locks do not allow multiple threads to access the critical section of different objects.
 Synchronized is a monitor lock which aquires lock on critical section of single object. Two different threads can access critical section of synchronized method of different objects simultaneously.
@@ -11,18 +9,15 @@ Synchronized is a monitor lock which aquires lock on critical section of single 
 what are new features of java 8 ?
 lambda expressions, functional interfaces , Optional,  CompletableFuture , default methods ,  new Date and Time API using package java.time
 
-What is the advantages of spring boot over spring mvc ?
- 1) Dependency Management (starters are available)
- 2) Autoconfiguration
- 3) Embedded server
 
-what is the design pattern used in ApplicationContext and BeanFactory ?
+
+
 what is yield method ?
 
 Explain garbage collection.
 
 If we return in try block, does finally execute ? yes 
-What is thymeleaf ?
+
 How string immutablility provides thread safety ?
 
 Can we extend interfaces from another interface? 
@@ -33,40 +28,8 @@ This method is used to create a fixed size list from an array or elements.
 
 
 
-1.What is bean in Spring? 
-In Spring, the objects that form the backbone of your application and that are managed by Spring IoC Container are called beans. Beans are instantiated, assembled, and managed by a Spring IoC container.
-In Spring Core , beans are defined  through @Configuration annotated classes. Beans are defined in these classes using @Bean annotated methods.
-@Configuration
-public class AppConfig {
 
-    @Bean
-    public MyBean myBean() {
-        return new MyBean(dependencyBean());
-    }
 
-    @Bean
-    public DependencyBean dependencyBean() {
-        return new DependencyBean();
-    }
-}
-
-2.What is Inversion of Control in Spring?
-Inversion of Control (IoC) is a design principle that refers to reversal of control flow in a software application. Instead of object itself controlling the instantiation (control flow), the process is delegated to external container like IoC container in spring.
-In context of Spring, IoC is implemented using Dependency Injection, whereby objects define their 
-Dependencies. The IoC container then injects those dependencies when it creates the bean.
-3. What is difference between BeanFactory and ApplicationContext ?
-Both BeanFactory and ApplicationContext are key components of Spring Framework.
-BeanFactory
-•	BeanFactory is the core interface for accessing Spring IoC Container.
-•	It provides fundamental mechanism or managing java objects called beans, which are often referred to as beans.
-•	It supports basic features of dependency injection and bean lifecycle management.
-•	BeanFactory loads bean definitions, instantiates beans, and manages their lifecycle based on configuration metadata provided in XML files , java annotations, or Java Code.
-•	BeanFactory provides lazy loading of beans , meaning beans are instantiated only when requested.
-ApplicationContext
-•	ApplicationContext is a sub-interface of BeanFactory.
-•	ApplicationContext adds more enterprise-specific functionality to BeanFactory such as event propagation, internationalization support , application layer configuration, AOP integration, and more.
-•	ApplicationContext eagerly loads and pre-instantiates singleton beans upon initialization , providing better performance than lazy loading in Bean Factory.
-•	It supports different resource loading mechanisms, environment awareness, and message resolution.
 4. Explain LifeCycle of a Bean 
 The lifecycle of beans in Spring refers to the various stages a bean goes through from its instantiation to its destruction. Understanding the bean lifecycle is crucial for managing resources, initialization, and cleanup tasks efficiently. The bean lifecycle in Spring typically consists of the following stages:
 Bean life cycle is managed by the spring container. When we run the program then, first of all, the spring container gets started. After that, the container creates the instance of a bean as per the request, and then dependencies are injected. And finally, the bean is destroyed when the spring container is closed. Therefore, if we want to execute some code on the bean instantiation and just after closing the spring container, then we can write that code inside the custom init() method and the destroy() method.
@@ -166,68 +129,13 @@ public class Client {
     }
 }
 
-5. Explain different scopes of bean in Spring 
-In Java, when you work with the Spring Framework, beans are objects managed by the Spring IoC (Inversion of Control) container. The scope of a bean defines the lifecycle and visibility of that bean within the container. Different scopes allow you to control how and when the container creates and manages instances of beans. Here are some common scopes of beans in Spring:
-1.	Singleton Scope:
-•	The singleton scope means that the Spring container creates only one instance of the bean for each container (or application context).
-•	All requests for the bean result in the same object instance being returned.
-•	This is the default scope in Spring.
-2.	Prototype Scope:
-•	The prototype scope means that the Spring container creates a new instance of the bean every time a request for that bean is made (i.e., every time getBean() is called).
-•	This leads to a new object instance being returned for each request.
-3.	Request Scope:
-•	Beans with request scope are created once per HTTP request.
-•	This scope is applicable only in the context of a web-aware Spring ApplicationContext.
-•	The same bean instance is provided to all request processing threads, but different instances are used for processing different requests.
-4.	Session Scope:
-•	Beans with session scope are created once per HTTP session.
-•	Like request scope, this is applicable only in the context of a web-aware Spring ApplicationContext.
-•	The same bean instance is provided for the entire duration of the user's session.
-5.	Application Scope:
-•	Beans with application scope are created once per ServletContext.
-•	They are available across all HTTP requests and sessions within the web application.
-6.	WebSocket Scope:
-•	Introduced in Spring 4.2, beans with WebSocket scope are created once per WebSocket session.
-•	They are available across WebSocket lifecycle.
-7.	Custom Scope:
-•	Spring allows developers to define custom scopes to fulfill specific requirements.
-•	Developers can implement their own Scope interface and define the bean lifecycle as per their needs.
-Choosing the appropriate scope for a bean depends on factors such as the lifecycle of the bean, the concurrency requirements, and the context in which the bean will be used.
 
 
-6.Explain @SpringBootAnnotation in SpringBoot
-The @SpringBootApplication annotation is a convenience annotation provided by the Spring Boot framework.It is often used to mark the main class of a Spring Boot application.This annotation combines several other annotations in to one : 
-•	@Configuration : Indicates that the class contains bean definitions that should be processed by the spring container.
-•	@EnableAutoConfiguration : Enables Spring Boot’s  auto-configuration mechanism, which automatically configures the spring application based on dependencies and properties present in the classpath. The feature simplifies the setup of Spring applications by reducing the need for explicit configuration.
-•	@ComponentScan : Instructs  Spring to scan the specified packages for components such as controllers , services , repositories etc and automatically register them as Spring beans in the application context.
-By using @SpringBootApplication, developers can bootstrap a Spring Boot application with minimal configuration. It's a convenient way to set up a Spring application with sensible defaults and auto-configuration while also enabling component scanning and defining additional beans if needed.
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
-public class MyApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(MyApplication.class, args);
-    }
-}
-In this example, MyApplication is marked as the main class for the Spring Boot application. When executed, SpringApplication.run() method bootstraps the application, triggering the auto-configuration, component scanning, and other necessary setup defined by Spring Boot.
 
-7.Explain AutoConfiguration in SpringBoot
-In Spring Boot, Auto-Configuration is a feature that automatically configures the Spring application based on the classpath dependencies, reducing the need for manual configuration. It leverages convention over configuration principle to set up your application with sensible defaults.
-Here's how Auto-Configuration works:
-1.	Classpath Scanning: Spring Boot scans the classpath for certain libraries and frameworks. For example, if it finds Hibernate on the classpath, it assumes that you're using JPA for database access.
-2.	Conditional Configuration: Spring Boot applies conditions to determine whether to apply certain configurations. For instance, it might check if a particular bean is already defined or if a specific property is set.
-3.	@Configuration: When Spring Boot detects that certain conditions are met, it generates @Configuration classes that define beans necessary for the detected libraries and frameworks. These configurations are typically exposed as Spring beans and can be injected into your application.
-4.	Customization: Spring Boot allows you to customize or override auto-configured beans by providing your own configurations. You can define your beans in your own configuration classes and Spring Boot will use those instead of the auto-configured ones.
 
-With spring-boot-starter-web and spring-boot-starter-data-jpa dependencies included:
-•	Spring Boot detects spring-boot-starter-web and sets up a web application context with sensible defaults like embedded Tomcat server, dispatcher servlet, etc.
-•	It also detects spring-boot-starter-data-jpa and assumes you're using JPA for database access. It then auto-configures the EntityManager, TransactionManager, and other necessary components for JPA.
-•	You can further customize this auto-configuration by providing your own @Configuration classes. For example, if you want to use a different datasource or configure JPA entities differently, you can define your own DataSource bean and entity classes, and Spring Boot will use those instead.
 
-8.	What is Actuator in Spring Boot
-Spring Boot Actuator is a set of production-ready features that provides monitoring, management, and operational support for Spring Boot applications. It offers various endpoints and metrics to monitor and manage your application at runtime. Actuator enables you to gather insights into the application's health, metrics, environment, configuration, and more.
 9.	Explain Functional Interfaces in java
 In java , functional interface is an interface that contains only one abstract method. Functional interfaces are key concept in Java’s support for functional programming, introduced in Java 8. They enable the use of lambda expressions and method references to represent instances of single method interfaces more concisely and effectively.
 Here are key points about functional interfaces in Java: 
@@ -530,7 +438,6 @@ public class SerializationExample {
 JAR - It is a compressed archive of .class files . They are used to distribute java libraries, java application
 WAR - Compressed archive of a web application, They are used to distribure web application
 
-19) How did you implement security in your application ?
 20) What are features of Java 17 ? sealed class 
 21) Can we override static methods in Java ? No. 
 22) Why String is immutable ? 
@@ -539,33 +446,17 @@ WAR - Compressed archive of a web application, They are used to distribure web a
   It can be safely used in multithreaded environments.
 23) What is the use of default methods in interfaces ? what is the signature of default methods.
 24) Does abstract class have constructor ? yes
-25) What does main method does in spring boot ?
-The SpringApplication class in Spring Boot is a key class used to bootstrap and launch a Spring application from a main method. It provides a convenient way to configure and run a Spring application with sensible defaults. This class plays a crucial role in the startup process by setting up the Spring context, performing configuration, and starting the embedded server (like Tomcat, Jetty, or Undertow) if it's a web application.
 
-Key Responsibilities of SpringApplication:
- 	-Bootstrap the application: It initializes the Spring application context, loading beans and configuring the environment.
-	-Configure the environment: Automatically loads properties and profiles based on various sources, such as application.properties, application.yml, 	or system variables.
-	-Set up default configurations: It applies sensible defaults for things like logging, bean scanning, and embedded server configurations.
-	-Launch the application: Starts the embedded web server (if a web application), and the application begins accepting requests.
 
-26) What happens if @Bean is defined in a class without @Configuration annotation ?
-	- Bean will not be managed by Ioc Container. The method will be just a normal method.
-	- If it is defined in any class annotated with @Component, @Service etc., bean is managed by Ioc but it will not be Singleton.
-27) What are @Qualifier and @Primary annotations ?
 
-28) If the Class implements multiple interfaces , use specific type during dependency injection instead of interface types.
 
-29) use @Import annotation to import another config class in to this class
-30) Use @Profiles for activating required profiles
-31) bean lifecycle
+
+
+
 32) What is the difference between Stream.of and Arrays.stream in java ?
 	Stream.of() creates entire object as stream if array is passed
 	Arrays.stream() treats elements of array as individual elements of stream
-33) Explain modelAtrribute in Spring Mvc
-34) Explain handler mapping in spring mvc
-35) Explain interceptor in spring mvc 
-36) how do you handle exceptions in spring mvc 
-37) how do you handle exceptions in spring boot
+
 38) what are different ways to achieve synchronization in java
 39) Explain how abstract class is different from interface. When to use what ?
 interfaces :

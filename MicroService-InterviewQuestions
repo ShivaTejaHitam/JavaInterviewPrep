@@ -33,7 +33,7 @@ What is distributed tracing, and how do you implement it in Spring Microservices
   Parent span - previous service invoked
 
 logs of different services can be viewed combined in tools like Kibana, cloudwatch. 
-In zipkin - spring cloud sleuth a tree used to get constructed by zipkin from the spans
+In zipkin - spring cloud sleuth a tree used to get constructed by zipkin from the spans of same trace
 
 when span is started within another span , the total time taken by parent span is sum of spans of child
 What is load balancing? How is it achieved in Spring Microservices?

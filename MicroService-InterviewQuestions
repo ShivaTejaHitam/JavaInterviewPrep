@@ -18,6 +18,18 @@ Advanced Concepts
 What is API Gateway? How is it implemented using Spring Cloud Gateway?
 What is Hystrix, and why is it used?
 What is distributed tracing, and how do you implement it in Spring Microservices?
+  log contains JSON or plain text to record the events happened during an API request.
+  It does not show end to end journey of an API request across microservices.
+  It is harder to identify whether the logs in two different microservices belong to same request or not.
+
+  Tracing tracks the path of the request across the microservices. It shows high level information like : 
+  -  which service called which service.
+  -  how much time each service took 
+  -  status code of each service.
+  It does not store detailed logs.
+
+  Trace Id - it connects request across microservices with 1 unique ID.
+  Span IDs - Each service has its unique span id.
 What is load balancing? How is it achieved in Spring Microservices?
 How do you handle session consistency in microservices?
 Data and Communication

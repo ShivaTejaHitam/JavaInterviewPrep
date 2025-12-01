@@ -34,7 +34,7 @@ What is distributed tracing, and how do you implement it in Spring Microservices
 
 logs of different services can be viewed combined in tools like Kibana, cloudwatch. 
 Old flow with spring cloud sleuth (brave)- a tree used to get constructed by zipkin from the spans of same trace. It supports only zipkin. 
-modern flow with Micrometer & opentelemetry - it supports any backend like zipkin, grafana
+modern flow with Micrometer & opentelemetry - it supports any backend like zipkin, grafana. It uses OTLP protocol
 
 when span is started within another span , the total time taken by parent span is sum of spans of child
 What is load balancing? How is it achieved in Spring Microservices?

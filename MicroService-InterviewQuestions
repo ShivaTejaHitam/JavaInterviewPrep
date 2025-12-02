@@ -32,9 +32,15 @@ What is distributed tracing, and how do you implement it in Spring Microservices
   Span IDs - Each service has its unique span id.
   Parent span - previous service invoked
 
-logs of different services can be viewed combined in tools like Kibana, cloudwatch. 
-Old flow with spring cloud sleuth (brave)- a tree used to get constructed by zipkin from the spans of same trace. It supports only zipkin. 
-modern flow with Micrometer & opentelemetry - it supports any backend like zipkin, grafana. It uses OTLP protocol
+  logs of different services can be viewed combined in tools like Kibana, cloudwatch. 
+  Old flow with spring cloud sleuth (brave)- a tree used to get constructed by zipkin from the spans of same trace. It supports only zipkin. 
+  modern flow with Micrometer & opentelemetry - it supports any backend like zipkin, grafana. It uses OTLP protocol
+
+   - run jaeger docker container
+   - in spring boot app add dependencies actuator(internally contains micrometer), micrometer  bridge (opentelemetry sdk) and opentelemetry exporter
+   - in spring boot application give port, application name , jaeger endpoint and sampling probability i.e what percent of requests to be traced
+   - start spring boot app. 
+   Now tracing initializes and starts generating spans for incoming requests and outgoing requests and thread handoffs
 
 when span is started within another span , the total time taken by parent span is sum of spans of child
 What is load balancing? How is it achieved in Spring Microservices?

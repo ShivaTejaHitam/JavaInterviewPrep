@@ -50,7 +50,7 @@ What is distributed tracing, and how do you implement it in Spring Microservices
    For FeignClient it works by default. 
 
 
-  For custom Trace use Tracer from OpenTelemetry
+  For custom Trace use Tracer interface from Micrometer
 What is load balancing? How is it achieved in Spring Microservices?
 How do you handle session consistency in microservices?
 Data and Communication

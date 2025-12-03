@@ -41,8 +41,16 @@ What is distributed tracing, and how do you implement it in Spring Microservices
    - in spring boot application give port, application name , jaeger endpoint and sampling probability i.e what percent of requests to be traced
    - start spring boot app. 
    Now tracing initializes and starts generating spans for incoming requests and outgoing requests and thread handoffs
+   when span is started within another span , the total time taken by parent span is sum of spans of child
 
-when span is started within another span , the total time taken by parent span is sum of spans of child
+   ServerHttpObservationFilter - it adds spanId . Also traceId if not found . 
+   Interceptor - If traceId already found it adds spanId and traceId remaings same.
+   Use builder approach when using restClient because it adds ObservationRestClientCustomizer
+   Use ObservationRestTemplateCustomizer when using RestTemplate
+   For FeignClient it works by default. 
+
+
+  For custom Trace use Tracer from OpenTelemetry
 What is load balancing? How is it achieved in Spring Microservices?
 How do you handle session consistency in microservices?
 Data and Communication

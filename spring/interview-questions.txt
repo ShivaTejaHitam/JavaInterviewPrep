@@ -8,6 +8,7 @@ what is the design pattern used in ApplicationContext and BeanFactory ?
 What is the advantages of spring boot over spring mvc and servlet based web applications?
 
 Servlet : servlets are java classes which handles client request , process it and returns response. Servlet container are the ones which manages servlets.
+Servlets involve route configuration in web.xml which was extra step.
  1) Dependency Management (starters are available)
  2) Autoconfiguration
  3) Embedded server

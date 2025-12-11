@@ -8,10 +8,18 @@ what is the design pattern used in ApplicationContext and BeanFactory ?
 What is the advantages of spring boot over spring mvc and servlet based web applications?
 
 Servlet : servlets are java classes which handles client request , process it and returns response. Servlet container are the ones which manages servlets.
-Servlets involve route configuration in web.xml which was extra step. Over the time it becomes too big and difficult to manage.
- 1) Dependency Management (starters are available)
- 2) Autoconfiguration
- 3) Embedded server
+ spring over servlets
+ 1) removal of web.xml - Servlets involve route configuration in web.xml which was extra step. Over the time it becomes too big and difficult to manage.
+ 2) Ioc / Dependency inversion - servlets used to depend on servlet containers for dependencies. lack of autowiring causes tight coupling
+ 3) Unit testing - due to depending on servlet container for dependencies, mocking is not easy 
+ 4) difficult to manage rest APIs due to path variables, request params , different types of http requests. hard to implement 
+ 5) spring framework is easy to integrate with other frameworks like mockito, junit, jdbc,hibernate 
+
+spring boot over spring mvc
+ No need to manage dispatcher servlet
+ 4) Dependency Management (starters are available)
+ 5) Autoconfiguration
+ 6) Embedded server
 
  What is thymeleaf ?
 

@@ -4,7 +4,8 @@ When using @Async we should manually configure the threadpool as per our applica
 
 what is the design pattern used in ApplicationContext and BeanFactory ?
 
-What is the advantages of spring boot over spring mvc ?
+
+What is the advantages of spring boot over spring mvc and servlet based web applications?
  1) Dependency Management (starters are available)
  2) Autoconfiguration
  3) Embedded server

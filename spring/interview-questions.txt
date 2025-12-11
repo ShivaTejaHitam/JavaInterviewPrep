@@ -17,9 +17,10 @@ Servlet : servlets are java classes which handles client request , process it an
 
 spring boot over spring mvc
  No need to manage dispatcher servlet
- 4) Dependency Management (starters are available)
- 5) Autoconfiguration
- 6) Embedded server
+ 6) Dependency Management (starters are available)
+ 7) Autoconfiguration - convention over configuration. Easy to develop the application without lot of boilerplate code for configuration
+ 8) Embedded server
+ 
 
  What is thymeleaf ?
 

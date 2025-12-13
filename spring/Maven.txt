@@ -6,3 +6,5 @@ Maven is project management tool. Helps developers with
 maven uses pom to achieve this.
 when maven command is given, it looks for pom.xml in the current directory and get necessary config.
 
+<project> tag specifies the schema , also makes sure that our XML adheres to the correct structure and version defined by maven
+

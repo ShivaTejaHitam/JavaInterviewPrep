@@ -9,3 +9,10 @@ when maven command is given, it looks for pom.xml in the current directory and g
 <project> tag specifies the schema , also makes sure that our XML adheres to the correct structure and version defined by maven
 <parent> used to define parent pom . by default( if no parent is specified) we inherit the configuration from super pom  
 
+<groupId>, <artifactId> , <version>, <name> - Unique identifier of your project
+
+<properties> - Define key value pairs for configuration.It can be referenced through out the pom file
+<repositories> <repository> </repository> </repositories> - this is where maven looks for dependencies and downloads artifacts(jars) .It is added by default even if we don't add it
+<dependencies> <dependency> </dependency> </dependencies> - this is where we declare the dependencies required for our project
+
+<build>

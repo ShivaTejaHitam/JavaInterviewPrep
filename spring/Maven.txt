@@ -7,5 +7,5 @@ maven uses pom to achieve this.
 when maven command is given, it looks for pom.xml in the current directory and get necessary config.
 
 <project> tag specifies the schema , also makes sure that our XML adheres to the correct structure and version defined by maven
-<parent> used to define parent pom . by default we inherit the configuration from super pom  
+<parent> used to define parent pom . by default( if no parent is specified) we inherit the configuration from super pom  
 

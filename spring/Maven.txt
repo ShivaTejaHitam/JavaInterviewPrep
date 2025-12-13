@@ -14,5 +14,11 @@ when maven command is given, it looks for pom.xml in the current directory and g
 <properties> - Define key value pairs for configuration.It can be referenced through out the pom file
 <repositories> <repository> </repository> </repositories> - this is where maven looks for dependencies and downloads artifacts(jars) .It is added by default even if we don't add it
 <dependencies> <dependency> </dependency> </dependencies> - this is where we declare the dependencies required for our project
+<build> - to add goals to phase through <plugin>
 
-<build>
+----------------------------------------------------------------------
+                        Build Lifecycle
+
+if you run specific goal of a particular phase, the all goals of previous phases + current phase goals before the one you defined will run.
+phases :validate - compile - test- package - verify - install - deploy
+each phase has a goals

@@ -1,1 +1,8 @@
+Maven is project management tool. Helps developers with 
+1) Build generation
+2) Dependency resolution
+3) Documentation generation etc
+
+maven uses pom to achieve this.
+when maven command is given, it looks for pom.xml in the current directory and get necessary config.
 

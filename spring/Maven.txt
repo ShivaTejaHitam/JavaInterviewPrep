@@ -22,3 +22,6 @@ when maven command is given, it looks for pom.xml in the current directory and g
 if you run specific goal of a particular phase, the all goals of previous phases + current phase goals before the one you defined will run.
 phases :validate - compile - test- package - verify - install - deploy
 each phase has a goals
+
+
+in m2 settings.xml you can configure where to store jar file

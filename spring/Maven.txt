@@ -25,3 +25,4 @@ each phase has a goals
 
 
 in m2 settings.xml you can configure where to store jar file
+for company specific remote repository, provide it in distribution management. Otherwise provide maven central which is public

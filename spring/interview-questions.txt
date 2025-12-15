@@ -1,6 +1,18 @@
 We should not use @Async and @Transactional together.
 When using @Async we should manually configure the threadpool as per our application needs
 
+Provide the execution timing of filters, interceptors ...
+Client
+  ↓
+Filter
+  ↓
+DispatcherServlet
+  ↓
+Interceptor
+  ↓
+Controller
+
+
 
 what is the design pattern used in ApplicationContext and BeanFactory ?
 

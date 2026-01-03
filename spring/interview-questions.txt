@@ -179,3 +179,4 @@ No view resolver is used
 The data is usually converted to JSON or XML
 
 @RestController =  @Controller + @ResponseBody
+39) Explain @InitBinder annotation

@@ -167,3 +167,15 @@ Key Responsibilities of SpringApplication:
 35) Explain interceptor in spring mvc 
 36) how do you handle exceptions in spring mvc 
 37) how do you handle exceptions in spring boot
+38) what is @ResponseBody annotation ?? 
+Normally, Spring MVC assumes a controller method returns a view name (like home.jsp or index.html).
+
+@ResponseBody changes that behavior:
+
+The returned data is sent as-is in the HTTP response
+
+No view resolver is used
+
+The data is usually converted to JSON or XML
+
+@RestController =  @Controller + @ResponseBody

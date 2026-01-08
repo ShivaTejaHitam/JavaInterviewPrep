@@ -39,7 +39,11 @@ spring boot over spring mvc
  1.What is bean in Spring? 
 In Spring, the objects that form the backbone of your application and that are managed by Spring IoC Container are called beans. Beans are instantiated, assembled,
 and managed by a Spring IoC container.
-In Spring Core , beans are defined  through @Configuration annotated classes. Beans are defined in these classes using @Bean annotated methods.
+In Spring Core , beans are defined  through 
+@Component annotation 
+or 
+@Configuration annotated classes. Beans are defined in these classes using @Bean annotated methods.
+
 @Configuration
 public class AppConfig {
 

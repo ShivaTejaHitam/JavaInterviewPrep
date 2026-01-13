@@ -286,3 +286,14 @@ The data is usually converted to JSON or XML
 @RestController =  @Controller + @ResponseBody
 39) Explain @InitBinder annotation
 40) If no constructor is defined spring boot uses default constructor provided by java.
+41) if there is default bean and custom bean , spring chooses custom bean
+42) Singleton bean with @lazy annotation are lazily initialized
+43) Disadvantage of Field Injection : 
+	-spring uses reflection which iterates over the fields and resolves dependencies. 
+	- does not support immutability
+    - chances of npe when object is initialized manually other than bean creation.
+44) The only advantage of setter injection - dependencies can be changed later. But disadvantage is it breaks immutability.
+45) Circular dependency . 
+   extract common code to new component ( recommended) 
+   use lazy annotation during injecting (autowired) in one of the component causing circular dependency
+   use postconstruct in one of the component

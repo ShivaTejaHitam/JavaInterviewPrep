@@ -285,3 +285,4 @@ The data is usually converted to JSON or XML
 
 @RestController =  @Controller + @ResponseBody
 39) Explain @InitBinder annotation
+40) If no constructor is defined spring boot uses default constructor provided by java.

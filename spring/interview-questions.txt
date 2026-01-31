@@ -303,3 +303,68 @@ The data is usually converted to JSON or XML
    extract common code to new component ( recommended) 
    use lazy annotation during injecting (autowired) in one of the component causing circular dependency
    use postconstruct in one of the component
+
+46) How do you fix dependency inversion violation due to @Qualifier annotation
+// option 1 : inject both beans 
+ @Component
+ public class ShoppingCartController {
+
+   @Qualifier("onlineOrder")
+   @Autowired
+   private Order onlineOrder;
+   @Qualifer("offlineOrder")
+   @Autowired
+   private Order offlineOrder;
+
+   @PostMapping
+   ResponseEntity<OrderResponse>  placeOrder(@RequestParam boolean isOnlineOrder) {
+		if(isOnlineOrder) {
+            return onlineOrder.placeOrder();
+       }
+
+       return offlineOrder.placeOrder();
+
+  }
+
+}
+
+// option 2 : create dynamic bean based on configuration from @Value
+
+   @Configuration
+   public class AppConfiguration {
+
+        public Order getOrder(@Value(${online.order} boolean isOnlineOrder) {
+             if(isOnlineOrder)  return OnlineOrder();
+             return offlineOrder();
+        }
+   }
+
+47) How you do dynamic bean initialization using @ConditionalOnProperty 
+     
+@Component
+@ConditionalOnProperty(prefix = "sqlConnection", value = "enabled" , havingValue = "true" )
+public class SqlConnection {
+
+}
+
+@Component
+@ConditionalOnProperty(prefix = "noSqlConnection", value = "enabled" , havingValue = "true" )
+public class SqlConnection {
+
+}
+
+use required= false in @Autowired annotation
+
+@Component 
+public class DBConnection {
+	@Autowired(required = false)
+	private SqlConnection sqlConnection;
+	@Autowired(required = false)
+    private NoSqlConnection noSqlConnection;
+
+}
+
+
+
+
+

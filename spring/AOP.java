@@ -266,4 +266,4 @@ No bytecode modification → only proxying → simple & fast.
 
 ---
 
-
+Internal working of AOP in spring

@@ -16,3 +16,6 @@ NOT_SUPPORTED: Runs the method non-transactionally and suspends any existing tra
 MANDATORY: Requires an existing transaction; throws an exception if none is present.
 NEVER: Runs without a transaction; throws an exception if one exists.
 NESTED: Runs within a nested transaction if one exists; otherwise, it starts a new transaction.
+
+
+what happens when exception occurs and handled within @Transaction method

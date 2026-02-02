@@ -1,0 +1,36 @@
+Got it — **just questions, no hints, no solutions, minimal wording**.
+
+### Java Executor Framework (Intermediate)
+
+1. Implement a fixed thread pool that processes tasks and shuts down gracefully after all tasks complete.
+2. Design a service that limits concurrent task execution to **N** using `ExecutorService`.
+3. Submit multiple `Callable` tasks and return results in the order of completion.
+4. Detect and handle a task that never terminates using `ExecutorService`.
+5. Implement a scheduled task that runs every 5 seconds and stops after 1 minute.
+6. Create a custom `ThreadFactory` that names threads and tracks uncaught exceptions.
+7. Implement task cancellation and ensure interrupted threads stop correctly.
+8. Execute a batch of tasks with a timeout and collect only completed results.
+
+---
+
+### CompletableFuture (Intermediate)
+
+1. Chain async calls where the second depends on the result of the first.
+2. Combine two independent async computations and return a single result.
+3. Run multiple async tasks and return the first successful result.
+4. Handle exceptions in an async pipeline and return a fallback value.
+5. Convert a list of `CompletableFuture<T>` into a single `CompletableFuture<List<T>>`.
+6. Enforce a timeout on an async operation.
+7. Execute async tasks using a custom `Executor`.
+8. Implement a retry mechanism using `CompletableFuture`.
+
+---
+
+### Mixed / Real-World Scenarios
+
+1. Process 1,000 requests concurrently with rate limiting and graceful shutdown.
+2. Parallelize API calls and aggregate results while handling partial failures.
+3. Build an async pipeline with validation, processing, and persistence stages.
+4. Cancel downstream tasks when one stage fails.
+
+If you want **hard mode**, **system-design flavored**, or **Java 17+ specific**, say the word 😄

@@ -15,7 +15,6 @@ infrastructure to execute Java applications. It contains the JVM and the core li
 Components of JRE : 
   - JVM ( Java Virtual Machine) - executes the bytecode
   - Java class libraries - pre-built classes and methods for tasks like I/O, networking, collections and more.
-  - Class loader - Dynamically loads classes in to memory as needed.
 Uses of JRE : 
  - Running java programs
  - provides all necessary dependencies to execute java bytecode.

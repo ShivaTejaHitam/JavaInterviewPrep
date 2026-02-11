@@ -8,6 +8,7 @@ What is the role of Spring Boot in microservices?
 How do you create a microservice in Spring Boot?
 
 Spring Cloud Basics
+What is resilience 4j ? explain rate limiter, bulk head, time limiter, circuit breaker , retry
 What is Spring Cloud, and why is it used in microservices?
 What is Service Discovery? Explain with an example.
 What is Netflix Eureka? How does it work with Spring Boot?

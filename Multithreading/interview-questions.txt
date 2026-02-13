@@ -1,0 +1,138 @@
+Here’s a **well-structured list of multithreading interview questions** suitable for a **4-year experienced Java developer**. At this level, interviewers expect **concept clarity + practical usage + internal working knowledge**.
+
+---
+
+## 🔹 Core Multithreading Concepts
+
+1. What is multithreading and why is it used in Java?
+2. Difference between **process** and **thread**?
+3. Different ways to create a thread in Java?
+
+   * Extending `Thread`
+   * Implementing `Runnable`
+   * Using `Callable` & `Future`
+   * Using Executor Framework
+4. Difference between `Runnable` and `Callable`?
+5. What is thread lifecycle in Java?
+6. What is context switching?
+
+---
+
+## 🔹 Synchronization & Locks
+
+7. What is synchronization in Java?
+8. Difference between synchronized method and synchronized block?
+9. What is intrinsic lock / monitor lock?
+10. What happens if two threads access a synchronized method?
+11. What is reentrancy?
+12. What is deadlock? How to prevent it?
+13. What is starvation and livelock?
+14. Difference between `ReentrantLock` and `synchronized`?
+15. What is `tryLock()`?
+
+You should also be comfortable explaining classes from:
+
+* Java Concurrency in Practice (commonly referenced in interviews)
+
+---
+
+## 🔹 Volatile & Memory Model
+
+16. What is `volatile` keyword?
+17. Difference between `volatile` and `synchronized`?
+18. What is Java Memory Model (JMM)?
+19. What is happens-before relationship?
+20. Can volatile guarantee atomicity?
+
+---
+
+## 🔹 Thread Communication
+
+21. What is `wait()`, `notify()`, and `notifyAll()`?
+22. Why must wait() be called inside synchronized block?
+23. Difference between sleep() and wait()?
+24. What is producer-consumer problem? How to solve it?
+
+---
+
+## 🔹 Executor Framework (Very Important for 4 Years Experience)
+
+25. What is Executor Framework?
+26. Difference between `execute()` and `submit()`?
+27. Types of thread pools in `Executors`?
+28. What is `ThreadPoolExecutor`?
+29. What happens if thread pool queue is full?
+30. What is `RejectedExecutionHandler`?
+
+Be familiar with:
+
+* Oracle Corporation Java official concurrency APIs
+
+---
+
+## 🔹 Concurrent Collections
+
+31. Difference between `HashMap` and `ConcurrentHashMap`?
+32. How does `ConcurrentHashMap` work internally?
+33. What is CopyOnWriteArrayList?
+34. When would you use BlockingQueue?
+35. Difference between synchronized collection and concurrent collection?
+
+---
+
+## 🔹 Atomic Classes
+
+36. What is `AtomicInteger`?
+37. What is CAS (Compare-And-Swap)?
+38. Difference between Atomic classes and synchronized blocks?
+
+---
+
+## 🔹 Practical / Scenario-Based Questions (Very Common for 4 Years Exp)
+
+39. How would you design a thread-safe singleton?
+40. How would you fix a deadlock in production?
+41. How to debug high CPU usage caused by threads?
+42. How to analyze thread dump?
+43. What tools have you used? (jstack, VisualVM, etc.)
+44. How would you improve performance of a multithreaded application?
+
+---
+
+## 🔹 Coding Questions They May Ask
+
+* Print odd/even numbers using two threads
+* Producer-consumer using BlockingQueue
+* Implement custom thread pool
+* Reverse a string using multiple threads (parallel processing)
+* Implement Double-Checked Locking singleton
+
+---
+
+## 🔹 Advanced (Asked in Strong Product Companies)
+
+45. What is ForkJoinPool?
+46. What is work-stealing algorithm?
+47. What is CompletableFuture?
+48. Difference between parallel stream and ExecutorService?
+49. What is false sharing?
+50. What is ThreadLocal?
+
+---
+
+# 🎯 For 4 Years Experience – Interviewer Expects:
+
+* Clear understanding of synchronization
+* Real-time usage of ExecutorService
+* Knowledge of ConcurrentHashMap internals
+* Debugging experience
+* Performance tuning exposure
+* Ability to explain issues faced in projects
+
+---
+
+If you want, I can also:
+
+* Provide **answers with explanations**
+* Share **top 15 most asked with detailed answers**
+* Or give a **mock interview Q&A simulation** tailored to your experience level

@@ -88,6 +88,8 @@ Be familiar with:
 
 ---
 
+cyclicbarrier, countdownlatch, semaphore
+
 ## 🔹 Practical / Scenario-Based Questions (Very Common for 4 Years Exp)
 
 39. How would you design a thread-safe singleton?

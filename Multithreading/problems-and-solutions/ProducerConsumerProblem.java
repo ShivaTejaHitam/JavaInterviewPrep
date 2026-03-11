@@ -13,7 +13,7 @@ class SharedResource {
 
             buffer.add(value);
             System.out.println("Produced: " + value);
-            notify();
+            notifyAll();
         }
     }
 
@@ -25,7 +25,7 @@ class SharedResource {
 
             int value = buffer.poll();
             System.out.println("Consumed: " + value);
-            notify();
+            notifyAll();
         }
     }
 }

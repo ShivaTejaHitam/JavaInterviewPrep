@@ -38,20 +38,23 @@ class ReadWriteLockModern {
     public static void main(String[] args){
         SharedBuffer buffer = new SharedBuffer();
 
-        Thread reader = new Thread(()->{
-            for (int i = 0; i < 5; i++) {
+        // Creating Reader Threads
+        Runnable readerTask = () -> {
+            for (int i = 0; i < 2; i++) {
                 buffer.read(Thread.currentThread().getName());
             }
-        });
-    
-        Thread writer = new Thread(() ->{
-            for (int i = 0; i < 3; i++) {
+        };
+
+        // Creating Writer Threads
+        Runnable writerTask = () -> {
+            for (int i = 0; i < 1; i++) {
                 buffer.write(Thread.currentThread().getName(), "Updated Data " + Math.random());
             }
-        });
-        
+        };
 
-        reader.start();
-        writer.start();
+        new Thread(readerTask, "Reader 1").start();
+        new Thread(readerTask, "Reader 2").start();
+        new Thread(writerTask, "Writer 1").start();
+        new Thread(readerTask, "Reader 3").start();
     }
 }

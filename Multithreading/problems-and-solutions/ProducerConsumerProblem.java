@@ -13,7 +13,7 @@ class SharedResource {
 
             buffer.add(value);
             System.out.println("Produced: " + value);
-            notifyAll();
+            notifyAll(); // do not use notify because it may lead to deadlock
         }
     }
 

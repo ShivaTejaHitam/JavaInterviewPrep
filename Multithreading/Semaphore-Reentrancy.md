@@ -77,5 +77,91 @@ public class ConcurrencyDemo {
 > **Pro Tip:** Always put your `release()` or `unlock()` calls in a `finally` block. If your code throws an exception and you forget to release the lock, your application will hang indefinitely, and nobody wants to debug a "ghost" deadlock at 2:00 AM.
 
 ---
+To understand **Ownership** and **Reentrancy**, it helps to think of them as the "Identity Card" and the "Memory" of a synchronization tool.
 
-Would you like me to explain how **ReadWriteLocks** fit into this mix, or perhaps help you debug a specific concurrency issue you're facing?
+---
+
+## 1. Ownership: "Who are you?"
+Ownership means the lock knows which specific thread holds it.
+
+* **ReentrantLock (Has Ownership):** It’s like a hotel room key. Only the person who checked in can use the key to unlock the door. If a different person tries to use their own key (or just walk in), they are blocked. Crucially, only the original person can "check out."
+* **Semaphore (No Ownership):** It’s like a bowl of 5 generic "Entry Passes." Anyone can take a pass, and **anyone can put one back.** A thread that never even took a pass can "release" one, effectively creating an extra permit out of thin air.
+
+
+
+### The "Hijack" Example (Ownership)
+In this example, Thread B "steals" or "breaks" the Semaphore, but fails to touch the Lock.
+
+```java
+Semaphore semaphore = new Semaphore(1);
+ReentrantLock lock = new ReentrantLock();
+
+// Thread A acquires both
+semaphore.acquire();
+lock.lock();
+
+// Thread B attempts to release them
+new Thread(() -> {
+    semaphore.release(); // WORKS! Semaphore doesn't care who releases it.
+    System.out.println("Thread B released the Semaphore (Hijacked!)");
+    
+    try {
+        lock.unlock(); // THROWS IllegalMonitorStateException!
+    } catch (IllegalMonitorStateException e) {
+        System.out.println("Thread B cannot unlock the ReentrantLock because it doesn't own it.");
+    }
+}).start();
+```
+
+---
+
+## 2. Reentrancy: "Have I seen you before?"
+Reentrancy allows a thread to enter a synchronized block that it **already** holds the lock for.
+
+* **ReentrantLock:** It keeps a **Hold Count**. If Thread A has the lock and calls another method that requires the same lock, the lock sees it's Thread A, increments the count to 2, and lets them in.
+* **Semaphore:** It has no memory. If a Semaphore has 1 permit and Thread A takes it, then Thread A asks for another permit (re-entering a method), the Semaphore sees 0 permits available and **makes Thread A wait forever (Deadlock).**
+
+
+
+### The "Deadlock" Example (Reentrancy)
+Watch how the `ReentrantLock` handles nested calls while the `Semaphore` gets stuck.
+
+```java
+public class ReentrancyTest {
+    private ReentrantLock lock = new ReentrantLock();
+    private Semaphore semaphore = new Semaphore(1);
+
+    public void lockMethod() {
+        lock.lock();
+        System.out.println("First lock acquired");
+        lock.lock(); // Success! Hold count becomes 2.
+        System.out.println("Second lock acquired (Reentrancy)");
+        lock.unlock();
+        lock.unlock();
+    }
+
+    public void semaphoreMethod() throws InterruptedException {
+        semaphore.acquire();
+        System.out.println("First permit acquired");
+        
+        // This will hang forever! 
+        // The thread is waiting for a permit that it is currently holding.
+        semaphore.acquire(); 
+        System.out.println("This line will never print.");
+    }
+}
+```
+
+---
+
+### Summary Table
+
+| Concept | ReentrantLock | Semaphore |
+| :--- | :--- | :--- |
+| **Ownership** | **Strict.** Only the owner can unlock. | **None.** Any thread can release. |
+| **Reentrancy** | **Supported.** Same thread can lock again. | **Not Supported.** Will cause a deadlock. |
+| **Analogy** | A personal key to a private office. | A stack of "tokens" for a public arcade game. |
+
+---
+
+Since `ReentrantLock` is strictly for one thread, it’s much safer for updating shared data. Would you like to see how to use **Condition Variables** with these locks to make threads wait for specific logic (like a "Full" or "Empty" buffer)?

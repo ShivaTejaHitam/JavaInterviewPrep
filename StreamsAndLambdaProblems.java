@@ -225,7 +225,7 @@ Arrays.asList(1,2,3,4,5,6).stream().sorted(Comparator.reverseOrder()).limit(3).f
 24) Find first repeated character in string
     String s = "hello";
         
-       System.out.println(Arrays.stream("hello".split("")).filter(c -> s.indexOf(c) == s.lastIndexOf(c)).findFirst().get());
+       System.out.println(Arrays.stream("hello".split("")).filter(c -> s.indexOf(c) != s.lastIndexOf(c)).findFirst().get());
 25) 
 26) 
 27) Find first 10 odd numbers

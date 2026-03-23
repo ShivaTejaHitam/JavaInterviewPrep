@@ -119,6 +119,7 @@ cyclicbarrier, countdownlatch, semaphore
 48. Difference between parallel stream and ExecutorService?
 49. What is false sharing?
 50. What is ThreadLocal?
+51. What is Thread Dump?
 
 ---
 

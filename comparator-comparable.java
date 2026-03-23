@@ -51,3 +51,6 @@ class Interview {
 
     }
 }
+
+
+Go through the methods in Comparator and Comparable that can be used while solving problems on java streams lambdas and collections

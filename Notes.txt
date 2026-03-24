@@ -370,4 +370,502 @@ abstract class :
 	- They provide base class with some behaviour. They are used to share code between closely related classes
 	- have state
 	- has constructor which can be called when  subclass is initialized.
+Java Versions--
 
+Are you familiar with the latest java release/java 11. ?
+
+What is the current version of java you use?
+
+
+
+6. What are the new features of java 8 you are aware of
+
+Functional interfaces
+
+lambda expression
+
+What is method references and default and static methods
+
+7. What Is the Difference Between Intermediate and Terminal Operations?
+
+8. What Is the Difference Between Map and flatMap Stream Operation?
+
+9.  Any predefined functional interfaces--predicate, Function ====
+
+10. Are you aware about memory management related changes in java 8--Permgen and meta space===
+
+11. What is method reference and constructor reference====
+
+12. What is binary operator===
+
+13. Are you aware about CompletableFuture class in java 8
+
+
+
+9. What is immutability in java?How can we create an immutable class?
+
+10. Why String class made as immutable
+
+11.  How can we create a singleton class ?
+
+11. How you are implementing security in your application
+
+12. How you are validating your API calls.Are you aware about jwT token.
+
+13. What is try with resources =======
+
+14. What is the difference between static and instance variable.
+
+15. What are the solid principles ======
+
+16. What are the methods available in Object class
+
+17. What is the contract between equals and hashcode methods
+
+18. What is the difference between shallow and deep cloning ?
+
+19. What is the difference between Comparator and Comparable
+
+20. What is the difference between static and dynamic polymorphism?
+
+Can we overload main methods
+
+Can we override static methods?
+
+21. What are the iterators in java?
+
+
+
+22. What is context switching ?
+
+23. What is time slicing
+
+Time slicing is the process used by the thread scheduler to divide CPU time between the available active threads.'
+
+24. What is a daemon thread?
+
+25. How do you create a daemon thread in Java-setDaemon
+
+22. How can we create threads in java
+
+22. What is the difference Callable and Runnable in java
+
+23. How can threads can communicate with each others ======
+
+14. What is the difference between start and run methods====
+
+23. How can we create thread pool in java======
+
+
+
+24. What is synchronization ===================
+
+25. what is the difference between == and .equals method
+
+26. difference between throw and throws 
+
+17. What is composition and aggregation ==============
+
+28. final finally finalize
+
+29. What are the methods available to print exception information--printstacktrace/getmessage/toString
+
+30. What are the design pattern you are aware of ==============
+
+31. Define System.out.println().
+
+32.What are the possible ways of making object eligible for garbage collection (GC) in Java?===
+
+
+
+1. what is the collection hirerchy in java
+
+2. What is the difference between collection and collections
+
+3. What is the difference between ArrayList and Vectors.===
+
+  In which case you will go for arraylist(retrival) and in which case you will pick linked list(insertion and deletion)
+
+4. What is the internal implementation of hashmap and arrayList.=======
+
+5. What is the diff between hashmap and concurrentHashmap(Synch & thread safe)===
+
+6. Can multiple threads read from ConcurrentHashMap same time--yes===
+
+7. What is the diff b/w Fail Fast and Fail Safe Iterator in Java=====
+
+
+
+
+
+
+
+5 What is volatile and transient keywords.=====
+SQL
+
+=====================================================
+
+1. What is index in sql ?
+
+1. Write a query to retrieve duplicate records from a table.===
+
+SELECT EmpID, EmpFname, Department COUNT(*) 
+
+FROM EmployeeInfo GROUP BY EmpID, EmpFname, Department 
+
+HAVING COUNT(*) > 1;
+
+
+
+2. SQL query to find third highest salary in company.
+
+  => SELECT * FROM `employee` ORDER BY `salary` DESC LIMIT 1 OFFSET 2;
+
+  => SELECT DISTINCT `salary` FROM `employee` ORDER BY `salary` DESC LIMIT 1 OFFSET 2;
+
+  => SELECT *
+
+   FROM `employee`
+
+   WHERE
+
+    `Salary` = (SELECT DISTINCT `Salary`
+
+        FROM `employee`
+
+        ORDER BY `salary` DESC
+
+     LIMIT 1 OFFSET 2
+
+     )
+
+    LIMIT 1;
+
+
+
+3.Write an SQL query to calculate the average salary for each department, including the department name and the average salary.===
+
+SELECT d.department_name, AVG(e.salary) AS average_salary
+
+FROM employees e
+
+JOIN departments d ON e.department_id = d.department_id
+
+GROUP BY d.department_name;
+
+
+
+
+
+Rest API
+
+========================================================
+
+
+
+1). What is the difference between POST and PUT methods?
+
+post-create resource/not idempotent
+
+put- Replace resource/idempotent
+
+2) What is URI?explain different parts of uri ?
+
+3) What is the concept of statelessness in REST?
+
+2). Http Response code?
+
+400 Bad Request: The request was not fulfilled due to an error in the request, such as a typo or missing data.
+
+401 Unauthorized: The request was not fulfilled because the client is not authenticated or authorized to access the requested resource.
+
+
+
+3). What is payload?
+
+4).What is the difference between REST and SOAP?
+
+5). which tools you are using to test API
+
+6). How do you keep REST APIs secure?
+
+7). How can you handle versioning in REST APIs?- URL Versioning:, Query Parameter Versioning:Header Versioning===
+
+8). What is content negotiation in REST API===
+
+9). What is the role of query parameters and path parameters in REST API? When should each be used, and what are their differences?
+
+10) While creating URI for web services, what are the best practices that needs to be followed?
+11) What are Idempotent methods? 
+
+12) Based on what factors, you can decide which type of web services you need to use - SOAP or REST?
+
+
+
+
+
+
+SpringBoot
+
+===================================
+
+1. What is the difference between BeanFactory and ApplicationContext ===============
+
+2. What is the life cycle of spring beans?
+
+3. What is @Qualifier used for ?
+
+4. What are the different bean scopes in spring ?--How can we change default scope of beans ============
+
+5. What is a Spring IoC container and types of Ioc
+
+6. Can you explain spring mvc architecture
+
+1. How you are handling exception in your spring boot application====
+
+1. application.properties files
+
+1. What are the benefits of spring boot over spring
+
+2. What is AutoConfiguration in spring boot?
+
+3. What does an actuator do in Spring Boot? ===========
+
+4. How do you implement Spring Security in a Spring Boot application?===OAuth
+
+5. What is the difference between @Controller and @RestController
+
+6. What are the annotations that you are using in spring boot application
+
+7. How do you configure logging in Spring Boot? What are some commonly used logging frameworks in Spring Boot?===
+
+8. How does Spring Boot support caching? What caching libraries or mechanisms can be used with Spring Boot====
+
+  @EnableCaching on configuration class, @Cacheable on methods
+
+9. How can profiles be used to manage different configurations for different environments?
+
+10.  Define RestTemplate in Spring.
+
+11.  What are the differences between the annotations @Controller and @RestController?
+
+
+
+
+
+
+
+JPA
+
+=================================================
+
+1. How do you manage transactions in your application ?
+
+2. How can we implement pagination in spring JPA ?
+
+3 .What types of identifier generation does JPA support?
+4. Explain the difference between a shared cache mode and a local cache mode in JPA? What are the advantages and disadvantages of each?
+
+
+
+
+
+   
+
+Webservice
+
+=================================================
+
+1.What is the difference between soap/ Restful full webservices ?
+
+
+
+
+
+Hibernate
+
+====================================================
+
+1. What is the difference between openSession and getCurrentSession?
+
+2. How can we integrate spring with hibernate
+
+1. Mention some advantages of using ORM over JDBC.
+
+2. What is the difference between get and load method?
+
+3. What is the difference between session.save() and session.persist() method?
+
+ Ans : -   The return type of the save method is java.io.Serializable. It returns the generated Id after saving the record.
+
+    It can save the changes to the database outside of the transaction. i.e. Save method can be used inside or outside the transaction.
+
+4. How can you achieve one to many relationship in hibernate===
+
+5. What are the states of the object in hibernate?
+
+6. What is lazy loading in hibernate?
+
+7. What is the first level cache and second level cache?
+
+
+
+
+
+Microservices
+
+================================
+
+1) What are the main differences between Microservices and Monolithic Architecture?
+
+The main differences between Microservices and Monolithic Architecture:
+
+
+
+Microservices                                 Monolithic Architecture
+
+The service startup is fast in Microservices. The service startup takes time as it is slow in Monolithic Architecture.
+
+It is a loosely coupled architecture.         It is primarily a tightly coupled architecture.
+
+
+
+In Microservices, if you make changes in a 
+
+single data model, it does not affect others. In Monolithic Architecture, any changes in the data model affect the entire database.
+
+It mainly focuses on products, not projects. It mainly focuses on the whole project.
+
+
+
+**which one is lossely coupled architecture
+
+
+
+2). What are the main components of Microservices?
+
+Containers, Clustering, and Orchestration
+
+IaC [Infrastructure as Code Conception]
+
+Cloud Infrastructure
+
+API Gateway
+
+Enterprise Service Bus
+
+Service Delivery
+
+
+
+3). How do you design communication between microservices? Discuss different approaches and their trade-offs ?
+
+Answer: There are multiple approaches to microservice communication:
+
+
+
+Synchronous HTTP/REST: Services communicate over HTTP using synchronous request-response calls. It's simple to implement but can lead to tight coupling and performance issues.
+
+Asynchronous messaging: Services communicate through message brokers, such as RabbitMQ or Apache Kafka. This allows loose coupling and better scalability but adds complexity.
+
+Service mesh: A dedicated infrastructure layer that handles communication between services. It provides features like load balancing, service discovery, and circuit breaking.
+
+Event-driven communication: Services communicate through events using publish-subscribe mechanisms. This enables loose coupling and scalability but adds complexity to event handling.
+
+The choice depends on factors like performance requirements, coupling constraints, scalability needs, and the complexity tolerance of the system.
+
+
+
+4.What is service discovery in the context of microservices? what are some popular service discovery mechanisms?--Netflix Eureka, Kubernetes
+
+
+
+5. What is fault tolerance in microservices? How can these principles be implemented?- Redundancy, Circuit Breaker Pattern,Timeout and Retry Policies =====
+
+6. What is API gateway in a microservices context?
+
+7. How would you handle security and authentication in a microservices architecture?
+
+
+
+4) What are the different strategies used in Microservices deployment?
+
+Multiple Service Instance per Host: It is used to run single or multiple service instances of the application on a single or multiple physical/virtual hosts.
+
+Service Instance per Host: It is used to run a service instance per host.
+
+Service Instance per Container: It is used to run each service instance in its respective container.
+
+Serverless Deployment: It packages the service as a ZIP file and uploads it to the Lambda function. 
+
+The Lambda function is a stateless service that automatically runs enough micro-services to handle all requests.
+
+
+
+
+
+
+
+==================================================================================
+
+What is the biggest challenge you faced recently that in to developement or implementation
+
+1. What is normalization in SQL?
+
+
+Please show us an example of denormalized table and how it can be normalized.
+
+
+2. Why do we need it from the SQL paradigm point of view?
+
+
+3. Can FK be non-unique or empty? Can PK be non-unique or empty?
+
+
+(D2+) 4. What is downsides of normalization? How can we fix this?
+
+
+(D2+) 5. Give us an example of many-to-many relationship, when do we need M2M?
+
+(Knows SQL)
+
+
+1. What is indexes?
+
+
+2. What is downside of indexes? When should we avoid them?
+
+
+(D2+) 3. How do they work under the hood? (during data selection; during data modification)
+
+
+What is complexity (in terms of Big-O notation) of selecting single element by condition on non-indexed column 'SELECT * FROM TABLE1 WHERE NON_INXEDED_COLUMN = 42'?
+
+
+What is the complexity of selecting single element by condition on indexed column 'SELECT * FROM TABLE1 WHERE INXEDED_COLUMN = 42'?
+
+
+Can index provide O(1) complexity?
+
+
+(D2+, knows MS SQL) 4. What is clustered index? Benefits/downsides?
+
+
+(D2+, knows Oracle) 4. What is index organized table? Benefits/downsides?
+
+We have 2 tables: ROOM (ROOM_ID, ROOM_NAME) and EMPLOYEE (EMPLYEE_ID, NAME, ROOM_ID)
+
+
+1. D3+: Please find a single employee who sits in the most overcrowded room.
+
+
+2. D1: Please find all rooms where there is no any employee.
+
+
+D2: w/o sub-selects?
+
+
+3. D1: Please find all employee who has not assigned to any room.
+
+
+4. D0: Please find all employee who has assigned to room number 1.

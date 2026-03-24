@@ -7,6 +7,7 @@ What are some challenges in implementing microservices?
 1) breaks the depending microservices . For eg : changes  in dac mr  apis , break dsh apis.
 2) latency 
 3) Transaction management
+4) Joins between tables is hard and slow
  
 What is the role of Spring Boot in microservices?
 How do you create a microservice in Spring Boot?

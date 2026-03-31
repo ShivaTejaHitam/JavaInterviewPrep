@@ -43,7 +43,9 @@ or
 Use @BatchSize to limit N+1 problem
 or
 Use @EntityGraph 
-For paginaation in JPQL it is same as Derived query. Just pass Pageable.
+For pagination in JPQL it is same as Derived query. Just pass Pageable.
+
+For static and reusable queries use @NamedQuery
 
 Native Query :
 Native query also returns results in the form of entities instead of rows 

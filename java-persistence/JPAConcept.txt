@@ -47,6 +47,8 @@ For pagination in JPQL it is same as Derived query. Just pass Pageable.
 
 For static and reusable queries use @NamedQuery
 
+
+If queries are much more complex and you need some db specific features then use native queries
 Native Query :
 Native query also returns results in the form of entities instead of rows 
 query has to be changed based on underlying db

@@ -32,7 +32,7 @@ sessionFactory
 
 Derived queries , findByName, deleteByName etc 
 If queries are too complex and difficult to handle through derived query, then go with JPQL.
-Use @Transactional for write operations on custom methods.
+Use @Transactional, @Modifying for write operations on custom methods.
 
 JPQL queries works on Entity instead of table directly. 
 JPQL

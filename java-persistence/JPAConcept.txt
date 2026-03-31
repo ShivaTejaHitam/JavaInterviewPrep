@@ -37,6 +37,7 @@ Use @Transactional for write operations on custom methods.
 JPQL queries works on Entity instead of table directly. 
 JPQL
 JPQL returns results in the form of entities instead of rows 
+JPQL also can be used to write joins between tables
 
 
 Native Query :

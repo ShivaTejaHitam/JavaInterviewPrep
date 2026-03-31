@@ -7,6 +7,7 @@ used in hash based collections like HashMap, Hashset, and HashTable. Here's what
     Different objects can have same hashCode(called a collision). In that case equals can be used to confirm if they are logically equal.
 3) Consistency requirement 
    The equals and hashcode methods should produce consistent results whenever they are called on same objects(provided no modification affecting equality is made.
+4) Do not use mutable fields in hashcode.
 
 Example : 
 

@@ -53,5 +53,7 @@ Native Query :
 Native query also returns results in the form of entities instead of rows 
 query has to be changed based on underlying db
 Native queries gives better performance because no need to manage persistent context.
+
 Criteria API :
 
+Specification API: 

@@ -30,7 +30,7 @@ inheritance mapping strategies (use @Inheritance annotation with different prope
 
 sessionFactory
 
-
+Use @Transactional for write operations on custom methods.
 JPQL
 JPQL returns results in the form of entities instead of rows 
 Query query = entityManager.createQuery("Select * ...");

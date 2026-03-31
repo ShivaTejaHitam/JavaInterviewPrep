@@ -38,7 +38,7 @@ JPQL queries works on Entity instead of table directly.
 JPQL
 JPQL returns results in the form of entities instead of rows 
 JPQL also can be used to write joins between tables
-
+Use JOIN FETCH to solve N+1 problem
 
 Native Query :
 Native query also returns results in the form of entities instead of rows 

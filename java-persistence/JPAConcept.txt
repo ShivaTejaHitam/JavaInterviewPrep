@@ -56,4 +56,4 @@ Native queries gives better performance because no need to manage persistent con
 
 Criteria API :
 
-Specification API: 
+Specification API: It solves Code duplicity and Code boilerplate due to Criteria API

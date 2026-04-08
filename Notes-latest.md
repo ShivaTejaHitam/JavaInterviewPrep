@@ -255,7 +255,7 @@ public class ComparatorExample {
 ---
 
 ## `volatile` and `transient`
-
+### Java Memory Model
 ### `volatile`
 
 - Indicates the variable may be updated by multiple threads.

@@ -251,6 +251,7 @@ public class ComparatorExample {
 - **Comparable** — `Arrays.sort` / `Collections.sort` using natural order defined on the class.
 - **Comparator** — `List.sort(Comparator)`, `TreeSet`/`TreeMap` with external `Comparator`, etc.
 
+- **Methods to revisit** - comparing, naturalOrder, reverseOrder, reversed, thenComparing
 ---
 
 ## `volatile` and `transient`

@@ -384,6 +384,7 @@ A: Use the Builder pattern or create a new object with updated values.
 - Overloading `main`; overriding static methods.
 - Iterators.
 - Context switching; time slicing; daemon threads (`setDaemon`).
+- How to design thread safe code
 - Creating threads; `Runnable` vs `Callable`; thread pools; inter-thread communication.
 - `start()` vs `run()`.
 - `==` vs `.equals`.
@@ -399,6 +400,7 @@ Collections:
 
 - Collection hierarchy.
 - `Collection` vs `Collections`.
+- Immutable Collections
 - `ArrayList` vs `Vector`; when to prefer `ArrayList` vs `LinkedList`.
 - `HashMap` / `ArrayList` internals.
 - `HashMap` vs `ConcurrentHashMap`.

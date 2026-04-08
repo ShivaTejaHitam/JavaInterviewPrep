@@ -354,7 +354,7 @@ public class SerializationExample {
 |----------------|----------------------|
 | Contract for implementers | Base for related types |
 | Multiple inheritance of type | Single inheritance |
-| No instance state (until `private` fields in Java 8+) | Can have fields and constructors |
+| No instance state (only public static final allowed) | Can have fields and constructors |
 | No constructors (for the interface itself) | Subclass constructor chains to abstract class |
 
 ### Java versions

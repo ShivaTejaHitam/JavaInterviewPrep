@@ -369,6 +369,9 @@ public class SerializationExample {
 Core / OOP / language:
 
 - Immutability; how to design an immutable class.
+- : How to modify an immutable class safely if requirements change?
+A: Use the Builder pattern or create a new object with updated values.
+
 - Singleton patterns.
 - Security in applications; JWT for APIs.
 - Try-with-resources.

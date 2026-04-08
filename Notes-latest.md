@@ -263,6 +263,7 @@ public class ComparatorExample {
 - Reads/writes go through main memory (visibility), not only thread-local caches.
 - Does **not** replace synchronization for compound actions (no atomicity for `i++` by itself).
 - singleton pattern using volatile
+- volatile ensures visibility of the reference, not the object’s internal state.
 ```java
 class SharedResource {
     private volatile boolean flag = false;

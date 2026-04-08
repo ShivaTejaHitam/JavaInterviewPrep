@@ -256,12 +256,13 @@ public class ComparatorExample {
 
 ## `volatile` and `transient`
 ### Java Memory Model
+
 ### `volatile`
 
 - Indicates the variable may be updated by multiple threads.
 - Reads/writes go through main memory (visibility), not only thread-local caches.
 - Does **not** replace synchronization for compound actions (no atomicity for `i++` by itself).
-
+- singleton pattern using volatile
 ```java
 class SharedResource {
     private volatile boolean flag = false;

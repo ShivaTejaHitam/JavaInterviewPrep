@@ -174,12 +174,15 @@ ARRAY --> STREAM     : Arrays.stream()
 3) Find the frequency of each character in string using Java 8 streams.
    String string = "helloworld";
    Arrays.stream(string.split("")).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
-4) Sort a given list of decimals in reverse order.
+ 4) Find the frequency of each element in an array or a list
+5) Sort a given list of decimals in reverse order.
    Arrays.asList(3.14, 1.59, 2.65, 4.33, 5.67).stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList()).forEach(System.out::println);
-5) Join a list of strings with '['  as prefix, ']' as suffix, and ',' as delimiter.
+
+6) Join a list of strings with '['  as prefix, ']' as suffix, and ',' as delimiter.
    System.out.println(Arrays.asList("Shiva","Teja","Bandaru").stream().map( s-> "[" + s + "]").collect(Collectors.joining(",")));
-6) Print the numbers from a given list of integers that are multiples of 5
+7) Print the numbers from a given list of integers that are multiples of 5
    Arrays.asList(5,6,10,15,16,20).stream().filter(n -> n%5==0).collect(Collectors.toList()).forEach(System.out::println);
+
 7) Find maximum and minimum of list of integers. 
     System.out.println(Arrays.asList(1,2,3,4,5).stream().min(Comparator.naturalOrder()).get());
     System.out.println(Arrays.asList(1,2,3,4,5).stream().max(Comparator.naturalOrder()).get());
@@ -188,9 +191,9 @@ ARRAY --> STREAM     : Arrays.stream()
 9) Get 3 maximum and 3 minimum numbers from list of integers.
    Arrays.asList(1,2,3,4,5,6).stream().sorted().limit(3).forEach(System.out::println);
 Arrays.asList(1,2,3,4,5,6).stream().sorted(Comparator.reverseOrder()).limit(3).forEach(System.out::println);
-10) 
+10) Check if two strings are anagrams or not using Java 8 streams
 
-11)
+11)Find the sum of all digits of a number in Java 8
 
 12) Find second largest element in array 
     Arrays.asList(2,1,4,3,5).stream().sorted(Comparator.reverseOrder()).skip(1).findFirst().get();
@@ -199,7 +202,7 @@ Arrays.asList(1,2,3,4,5,6).stream().sorted(Comparator.reverseOrder()).limit(3).f
 14) Sum and Average of array 
     Arrays.stream(numbers).sum();
     Arrays.stream(numbers).average().orElse(0.0);
-15) 
+15) Find the common elements between two arrays
 
 16) Reverse each word of string using stream
     Arrays.stream(input.split(" ")) // Split the string into words
@@ -207,7 +210,7 @@ Arrays.asList(1,2,3,4,5,6).stream().sorted(Comparator.reverseOrder()).limit(3).f
                 .collect(Collectors.joining(" "));
 17) Find sum of first 10 natural numbers
    IntStream.rangeClosed(1,10).sum();
-18) 
+18) Reverse an integer array
 19) print the first 10 even numbers.
     Instream.rangeClosed(1,20).filter(n -> n%2 == 0).forEach(System.out::println);
 20) Find the most repeated element in the array.
@@ -219,17 +222,19 @@ Arrays.asList(1,2,3,4,5,6).stream().sorted(Comparator.reverseOrder()).limit(3).f
                 .max(Map.Entry.comparingByValue()) // Find the entry with the max value
                 .map(Map.Entry::getKey) // Extract the key (element)
                 .orElseThrow(() -> new IllegalArgumentException("Array is empty"));
-21) 
-22).
-23) 
+21) Check if a string is a palindrome using Java 8 streams
+22)Find strings in a list that start with a number
+23) Extract duplicate elements from an array
+    Print duplicate characters in a string
 24) Find first repeated character in string
     String s = "hello";
         
        System.out.println(Arrays.stream("hello".split("")).filter(c -> s.indexOf(c) != s.lastIndexOf(c)).findFirst().get());
-25) 
-26) 
+25) Find the first non-repeated character in a string
+26) Generate the Fibonacci series
 27) Find first 10 odd numbers
 Instream.rangeClosed(1,20).filter(n -> n%2 == 0).forEach(System.out::println);.
 28) Find last element of array,
    Arrays.asList(1,2,3,4,5).stream().reduce((first,second)->second).get();
-29)
+29)Calculate the age of a person in years
+ 30) Extract unique matching strings from String array

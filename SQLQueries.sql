@@ -6,132 +6,95 @@ Here are the 40 SQL interview questions shuffled:
 
 Select * from Employee E where E.salary > (Select salary from Employee M where M.id = E.managerId);
 
+2. **For each department, list the employee with the second-highest salary.**
+
+3. **Find the department with the highest average salary.**
 
 
 
-5. **For each department, list the employee with the second-highest salary.**
+4. **Find the employees who earn more than the average salary of their department.**
+
+
+
+
+
+
+
+5. **List all employees along with their manager’s name. If the employee does not have a manager, display 'No Manager'.**
+
+
+
+6. **For each department, list the name of the employee with the highest salary.**
+
+
+
+
 
 7. **Find the department with the highest average salary.**
 
 
 
-10. **Find the employees who earn more than the average salary of their department.**
 
 
+8. Write a query to find the **second highest salary** from an Employee table.
 
+9. Write a query to find the **Nth highest salary** from a table.
 
+10. Find employees who earn **more than the average salary**.
 
+11. Write a query to **remove duplicate rows** from a table.
 
+12. Write a query to **find duplicate records** in a table.
 
-25. **List all employees along with their manager’s name. If the employee does not have a manager, display 'No Manager'.**
+13. Find employees whose **salary is greater than their manager's salary**.
 
+14. Write a query to display **the current date** in SQL.
 
+15. Write a query to **fetch first 5 records** from a table.
 
-28. **For each department, list the name of the employee with the highest salary.**
+16. Write a query to **fetch last 5 records** from a table.
 
+17. Write a query to **count number of employees in each department**.
 
+18. Write a query to **retrieve employees who do not have a department assigned**.
 
+19. Write a query to **find employees working in the same department**.
 
+20. Write a query to **get employee details along with department name**.
 
-33. **Find the department with the highest average salary.**
+21. Write a query to **list departments with no employees**.
 
+22. Write a query using **SELF JOIN** to find employee-manager relationships.
 
+23. Write a query to **find department with highest number of employees**.
 
-Here are **30 classic SQL interview questions** commonly asked for **4 years experienced candidates**.
-As requested, **questions only (no answers)**.
+24. Write a query to **calculate total salary department-wise**.
 
----
+25. Write a query to **find departments having more than 5 employees**.
 
-# Top 30 SQL Interview Questions (4 Years Experience)
+26. Write a query to **find the maximum salary in each department**.
 
-## Basic to Intermediate Core SQL
+27. Write a query to **find departments where average salary is greater than 50,000**.
 
-1. Write a query to find the **second highest salary** from an Employee table.
+28 Write a query to **find top 3 salaries in each department**.
 
-2. Write a query to find the **Nth highest salary** from a table.
+29. Write a query using **ROW_NUMBER()** to assign row numbers to employees.
 
-3. Find employees who earn **more than the average salary**.
+30. Write a query to **rank employees based on salary**.
 
-4. Write a query to **remove duplicate rows** from a table.
+31. Write a query to **find employees with duplicate salaries**.
 
-5. Write a query to **find duplicate records** in a table.
+32. Write a query to **find cumulative salary** of employees.
 
-6. Find employees whose **salary is greater than their manager's salary**.
+33. Write a query to **swap values of two columns** in a table.
 
-7. Write a query to display **the current date** in SQL.
+34. Write a query to **find missing numbers** in a sequence.
 
-8. Write a query to **fetch first 5 records** from a table.
+35. Write a query to **pivot rows into columns**.
 
-9. Write a query to **fetch last 5 records** from a table.
+36. Write a query to **unpivot columns into rows**.
 
-10. Write a query to **count number of employees in each department**.
-
----
-
-## Joins (Very Frequently Asked)
-
-11. Write a query to **retrieve employees who do not have a department assigned**.
-
-12. Write a query to **find employees working in the same department**.
-
-13. Write a query to **get employee details along with department name**.
-
-14. Write a query to **list departments with no employees**.
-
-15. Write a query using **SELF JOIN** to find employee-manager relationships.
-
----
-
-## Group By & Aggregations
-
-16. Write a query to **find department with highest number of employees**.
-
-17. Write a query to **calculate total salary department-wise**.
-
-18. Write a query to **find departments having more than 5 employees**.
-
-19. Write a query to **find the maximum salary in each department**.
-
-20. Write a query to **find departments where average salary is greater than 50,000**.
-
----
-
-## Subqueries & Window Functions
-
-21. Write a query to **find top 3 salaries in each department**.
-
-22. Write a query using **ROW_NUMBER()** to assign row numbers to employees.
-
-23. Write a query to **rank employees based on salary**.
-
-24. Write a query to **find employees with duplicate salaries**.
-
-25. Write a query to **find cumulative salary** of employees.
-
----
-
-## Real-World Scenario Based Questions
-
-26. Write a query to **swap values of two columns** in a table.
-
-27. Write a query to **find missing numbers** in a sequence.
-
-28. Write a query to **pivot rows into columns**.
-
-29. Write a query to **unpivot columns into rows**.
-
-30. Write a query to **find consecutive records** (e.g., consecutive login days).
-
-
-
-
-
-
-
-
-
-
-
+37. Write a query to **find consecutive records** (e.g., consecutive login days).
 
 
 

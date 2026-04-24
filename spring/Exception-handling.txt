@@ -13,3 +13,5 @@ ExceptionHandlerExceptionResolver handles exceptions using @ExceptionHandler and
 ResponseStatusExceptionResolver handles exceptions with @ResponseStatus annotation
 We can use @ResponseStatus along with @ExceptionHandler , the spring framework sets the status given in @ResponseStatus. 
 Note : ResponseStatusExceptionhandler is not involved in this case. However it is not advised to use both of them together
+
+DefaultHandlerExceptionResolver handles default exceptions 

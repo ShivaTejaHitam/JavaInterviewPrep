@@ -11,4 +11,5 @@ priority goes to child exception handler
 
 ExceptionHandlerExceptionResolver handles exceptions using @ExceptionHandler and @ControllerAdvice
 ResponseStatusExceptionResolver handles exceptions with @ResponseStatus annotation
-We can use @ResponseStatus along with @ExceptionHandler , in that case status of @ResponseStatus has higher priority because that handler is executed after exceptionHandlerExceptionResolver
+We can use @ResponseStatus along with @ExceptionHandler , the spring framework sets the status given in @ResponseStatus. 
+Note : ResponseStatusExceptionhandler is not involved in this case

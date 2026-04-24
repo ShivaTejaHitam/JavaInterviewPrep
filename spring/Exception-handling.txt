@@ -8,3 +8,5 @@ first priority goes to controller level
 
 what if handlers for child and parent exceptions exist in controller or globalexception handler ?
 priority goes to child exception handler
+
+ExceptionHandlerExceptionResolver handles exceptions using @ExceptionHandler and @ControllerAdvice

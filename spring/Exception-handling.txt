@@ -10,3 +10,4 @@ what if handlers for child and parent exceptions exist in controller or globalex
 priority goes to child exception handler
 
 ExceptionHandlerExceptionResolver handles exceptions using @ExceptionHandler and @ControllerAdvice
+ResponseStatusExceptionResolver handles exceptions with @ResponseStatus annotation

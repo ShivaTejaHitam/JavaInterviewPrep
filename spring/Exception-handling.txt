@@ -1,3 +1,5 @@
+
+if we don't want to  rely on exception resolvers, wrap the exception in response entity
 what happens if we directly throw exception in spring boot without wrapping it in ResponseEntity ?
 DefaultExceptionHandler provided by framework will handle it and return it in appropriate format. 
 What is better practice to handle exceptions ? 

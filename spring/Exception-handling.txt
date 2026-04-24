@@ -1,0 +1,10 @@
+what happens if we directly throw exception in spring boot without wrapping it in ResponseEntity ?
+DefaultExceptionHandler provided by framework will handle it and return it in appropriate format. 
+What is better practice to handle exceptions ? 
+use @ExceptionHandler in controller layer
+if there are common exceptions, handle them in GlobalExceptionHandler
+What if the exception is handled both at controller level and global level ?
+first priority goes to controller level
+
+what if handlers for child and parent exceptions exist in controller or globalexception handler ?
+priority goes to child exception handler

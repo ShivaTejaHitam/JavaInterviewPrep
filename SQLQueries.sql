@@ -40,16 +40,10 @@ WHERE salary_rank = 2;
 
 6. **For each department, list the name of the employee with the highest salary.**
 
-
-
-
-
 7. **Find the department with the highest average salary.**
 
-
-
-
-
+7.   Find top 3 highest-paid employees per department
+  
 8. Write a query to find the **second highest salary** from an Employee table.
 
 9. Write a query to find the **Nth highest salary** from a table.

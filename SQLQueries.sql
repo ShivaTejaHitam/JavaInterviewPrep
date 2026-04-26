@@ -1,7 +1,4 @@
 
-
-Here are the 40 SQL interview questions shuffled:
-
 1. **List all employees whose salary is higher than the salary of their manager.**
 
 Select * from Employee E where E.salary > (Select salary from Employee M where M.id = E.managerId);

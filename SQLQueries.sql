@@ -30,7 +30,7 @@ WHERE salary_rank = 2;
 
 
 
-
+5. Departments with more employees than average department size
 
 
 

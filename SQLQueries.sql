@@ -42,7 +42,6 @@ WHERE salary_rank = 2;
 
 7. **Find the department with the highest average salary.**
 
-7.   Find top 3 highest-paid employees per department
   
 8. Write a query to find the **second highest salary** from an Employee table.
 
@@ -58,17 +57,11 @@ WHERE salary_rank = 2;
 
 14. Write a query to display **the current date** in SQL.
 
-15. Write a query to **fetch first 5 records** from a table.
-
-16. Write a query to **fetch last 5 records** from a table.
-
 17. Write a query to **count number of employees in each department**.
 
 18. Write a query to **retrieve employees who do not have a department assigned**.
 
 19. Write a query to **find employees working in the same department**.
-
-20. Write a query to **get employee details along with department name**.
 
 21. Write a query to **list departments with no employees**.
 
@@ -103,27 +96,3 @@ WHERE salary_rank = 2;
 36. Write a query to **unpivot columns into rows**.
 
 37. Write a query to **find consecutive records** (e.g., consecutive login days).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

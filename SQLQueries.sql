@@ -7,6 +7,20 @@ Here are the 40 SQL interview questions shuffled:
 Select * from Employee E where E.salary > (Select salary from Employee M where M.id = E.managerId);
 
 2. **For each department, list the employee with the second-highest salary.**
+  SELECT 
+    empname, 
+    dept_name, 
+    salary
+FROM (
+    SELECT 
+        e.empname, 
+        d.dept_name, 
+        e.salary,
+        DENSE_RANK() OVER (PARTITION BY d.dept_name ORDER BY e.salary DESC) as salary_rank
+    FROM employee e
+    JOIN department d ON e.dept_id = d.dept_id
+) ranked_salaries
+WHERE salary_rank = 2;
 
 3. **Find the department with the highest average salary.**
 

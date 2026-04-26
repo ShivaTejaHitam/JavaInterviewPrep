@@ -71,6 +71,11 @@ WHERE
 19. Write a query to **find employees working in the same department**.
 
 21. Write a query to **list departments with no employees**.
+  SELECT d.name
+FROM departments d
+LEFT JOIN employees e
+    ON d.id = e.dept_id
+WHERE e.dept_id IS NULL;
 
 22. Write a query using **SELF JOIN** to find employee-manager relationships.
 

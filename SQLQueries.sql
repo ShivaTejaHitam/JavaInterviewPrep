@@ -36,9 +36,6 @@ WHERE salary_rank = 2;
 
 
 6. **For each department, list the name of the employee with the highest salary.**
-
-7. **Find the department with the highest average salary.**
-
   
 8. Write a query to find the **second highest salary** from an Employee table.
 
@@ -49,8 +46,6 @@ WHERE salary_rank = 2;
 11. Write a query to **remove duplicate rows** from a table.
 
 12. Write a query to **find duplicate records** in a table.
-
-13. Find employees whose **salary is greater than their manager's salary**.
 
 14. Write a query to display **the current date** in SQL.
 

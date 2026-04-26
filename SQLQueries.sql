@@ -25,7 +25,22 @@ WHERE salary_rank = 2;
 
 4. **Find the employees who earn more than the average salary of their department.**
 
-
+SELECT 
+    e.employee_id,
+    e.employee_name,
+    e.department_id,
+    e.salary
+FROM 
+    employees e
+WHERE 
+    e.salary > (
+        SELECT 
+            AVG(salary)
+        FROM 
+            employees
+        WHERE 
+            department_id = e.department_id
+    );
 
 5. Departments with more employees than average department size
 

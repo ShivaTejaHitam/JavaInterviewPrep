@@ -19,6 +19,7 @@ In Java 8, think of **Streams** as belonging to two families:
   * `IntStream`
   * `LongStream`
   * `DoubleStream`
+ Created from : IntStream , DoubleStream , Arrays.stream(int[])
 * Purpose:
 
   * Avoid boxing/unboxing overhead (`int` <-> `Integer`)

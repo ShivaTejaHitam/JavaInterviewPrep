@@ -79,6 +79,8 @@ WHERE e.dept_id IS NULL;
 
 22. Write a query using **SELF JOIN** to find employee-manager relationships.
 
+22. Find no of reportees for each employee. 
+  
 23. Write a query to **find department with highest number of employees**.
 
 24. Write a query to **calculate total salary department-wise**.

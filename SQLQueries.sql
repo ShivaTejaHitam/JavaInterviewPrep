@@ -66,8 +66,6 @@ WHERE
 
 17. Write a query to **count number of employees in each department**.
 
-18. Write a query to **retrieve employees who do not have a department assigned**.
-
 19. Write a query to **find employees working in the same department**.
 
 21. Write a query to **list departments with no employees**.

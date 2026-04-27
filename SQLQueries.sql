@@ -80,7 +80,16 @@ WHERE e.dept_id IS NULL;
 22. Write a query using **SELF JOIN** to find employee-manager relationships.
 
 22. Find no of reportees for each employee. 
-  
+
+    SELECT 
+    e.emp_id,
+    e.emp_name,
+    COUNT(r.emp_id) AS reportee_count
+FROM Employee e
+LEFT JOIN Employee r
+ON e.emp_id = r.manager_id
+GROUP BY e.emp_id, e.emp_name;
+
 23. Write a query to **find department with highest number of employees**.
 
 24. Write a query to **calculate total salary department-wise**.

@@ -39,11 +39,11 @@ These are asked in **almost every interview**.
     **LAZY** and **EAGER** fetching?
 
 11. What is the **N+1 select problem**, and how do you fix it?
-
+    Using JOIN FETCH or EntityGraph(attributePaths = {...})
 12. What is **CascadeType**? Explain common cascade types.
 
 13. What is **orphanRemoval**, and how is it different from cascade delete?
-
+  orphanRemoval is necessary when child needs to be deleted when relationShip between parent and child is broken. Whereas CascaseType.REMOVE removes children only during parent deletion
 14. What are **bidirectional** and **unidirectional** relationships?
 
 15. How do you handle **infinite recursion** in bidirectional mapping?

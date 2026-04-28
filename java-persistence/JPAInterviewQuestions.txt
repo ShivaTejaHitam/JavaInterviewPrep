@@ -47,7 +47,7 @@ These are asked in **almost every interview**.
 14. What are **bidirectional** and **unidirectional** relationships?
 
 15. How do you handle **infinite recursion** in bidirectional mapping?
-
+ using Dtos ( recommended), use @JsonManagedReference / @JsonBackedReference , use @JsonIgnore
 (Json annotations or DTO usage)
 
 ---

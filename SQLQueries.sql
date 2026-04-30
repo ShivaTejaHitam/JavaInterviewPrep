@@ -21,7 +21,7 @@ WHERE salary_rank = 2;
 
 3. **Find the department with the highest average salary.**
 
-
+  Select dept_id, AVG(salary) as avg_salary from Employee GROUP BY dept_id ORDER BY avg_salary desc LIMIT 1;
 
 4. **Find the employees who earn more than the average salary of their department.**
 

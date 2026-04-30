@@ -78,6 +78,13 @@ WHERE emp_count > avg_count;
 
 
 6. **For each department, list the name of the employee with the highest salary.**
+SELECT e.name, e.dept_id, e.salary
+FROM Employee e
+WHERE e.salary = (
+    SELECT MAX(salary)
+    FROM Employee
+    WHERE dept_id = e.dept_id
+);
   
 8. Write a query to find the **second highest salary** from an Employee table.
 
@@ -94,7 +101,7 @@ WHERE emp_count > avg_count;
 17. Write a query to **count number of employees in each department**.
 
 19. Write a query to **find employees working in the same department**.
-
+self join
 21. Write a query to **list departments with no employees**.
   SELECT d.name
 FROM departments d

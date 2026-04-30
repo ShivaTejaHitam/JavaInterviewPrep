@@ -44,6 +44,33 @@ WHERE
 
 5. Departments with more employees than average department size
 
+  SELECT department_id, COUNT(*) AS emp_count
+FROM employees
+GROUP BY department_id
+HAVING COUNT(*) > (
+    SELECT AVG(dept_size)
+    FROM (
+        SELECT COUNT(*) AS dept_size
+        FROM employees
+        GROUP BY department_id
+    ) t
+);
+
+
+
+or
+
+
+SELECT department_id, emp_count
+FROM (
+    SELECT 
+        department_id,
+        COUNT(*) AS emp_count,
+        AVG(COUNT(*)) OVER () AS avg_count
+    FROM employees
+    GROUP BY department_id
+) t
+WHERE emp_count > avg_count;
 
 
 5. **List all employees along with their manager’s name. If the employee does not have a manager, display 'No Manager'.**

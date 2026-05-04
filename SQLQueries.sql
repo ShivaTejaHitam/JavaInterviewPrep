@@ -75,7 +75,13 @@ WHERE emp_count > avg_count;
 
 5. **List all employees along with their manager’s name. If the employee does not have a manager, display 'No Manager'.**
 
-
+   SELECT 
+    e.employee_id,
+    e.employee_name AS employee_name,
+    m.employee_name AS manager_name
+FROM employees e
+LEFT JOIN employees m
+    ON e.manager_id = m.employee_id;
 
 6. **For each department, list the name of the employee with the highest salary.**
 SELECT e.name, e.dept_id, e.salary

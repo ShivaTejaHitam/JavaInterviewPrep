@@ -107,7 +107,16 @@ WHERE e.salary = (
 17. Write a query to **count number of employees in each department**.
 
 19. Write a query to **find employees working in the same department**.
-self join
+SELECT 
+    e1.employee_id AS emp1_id,
+    e1.employee_name AS emp1_name,
+    e2.employee_id AS emp2_id,
+    e2.employee_name AS emp2_name,
+    e1.department_id
+FROM employees e1
+JOIN employees e2
+    ON e1.department_id = e2.department_id
+    AND e1.employee_id < e2.employee_id;
 21. Write a query to **list departments with no employees**.
   SELECT d.name
 FROM departments d

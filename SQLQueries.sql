@@ -150,6 +150,12 @@ GROUP BY e.emp_id, e.emp_name;
 28 Write a query to **find top 3 salaries in each department**.
 
 29. Write a query using **ROW_NUMBER()** to assign row numbers to employees.
+  SELECT 
+    employee_id,
+    employee_name,
+    department,
+    ROW_NUMBER() OVER (ORDER BY employee_id) AS row_num
+FROM employees;
 
 30. Write a query to **rank employees based on salary**.
 
